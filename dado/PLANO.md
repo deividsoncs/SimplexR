@@ -151,3 +151,17 @@ dado/
 - Plano de arte: `arte/PLANO_ARTE.md` — bíblia de estilo dos pictogramas, adaptação e prompts por tema, artes de apoio (face "?", fundos, ícone, tela 18+), 69 fichas de pose e checklist de produção.
 - Fluxo: pictograma-base vetorial (SVG) → variações por tema (PNG 1024 com alfa + WebP) → atlas do dado → revisão ("teste do print em público").
 - Poses mais delicadas (10, 19, 21, 26, 58, 61): usar vista de cima ou 3/4 alto.
+
+## Produção das artes (pesquisa de set/2026)
+- **Feito por código (Claude, custo ~zero):** 69 pictogramas SVG das faces, casca estilo Gwent (moldura, botões, medalhões, bordas bronze/prata/ouro, verso da carta), texturas procedurais do dado e fundos.
+- **Ilustrações dos cartões (IA de imagem):** 276 (69 × 4 temas) + ~20 artes de apoio; com retentativas, ~600–900 gerações.
+- **Ferramenta recomendada:** FLUX 2 / FLUX Kontext via fal.ai ou Replicate (US$ 0,03–0,055/imagem, total estimado US$ 20–50), com até 10 imagens de referência para manter o elenco consistente. Alternativa: Stable Diffusion/FLUX local no ComfyUI (GPU ≥ 12 GB ou GPU alugada).
+- **Atenção à política de conteúdo:** GPT Image, Imagen e Midjourney tendem a recusar cenas de casal sensuais; testar antes de gerar em lote.
+- **Fluxo:** folhas de personagem (3–4 casais fictícios por tema) → pictograma SVG como guia de pose (ControlNet) → template + `POSE_DESCRIPTION` do `arte/PLANO_ARTE.md` → revisão pelo checklist.
+- **Orquestração por Claude:** possível se um servidor MCP de fal.ai/Replicate for conectado na sessão.
+- **Ordem:** código + pictogramas SVG + casca primeiro (jogo 100% jogável), ilustrações depois.
+
+## Próximos passos (onde paramos)
+1. Começar a **Fase 1** no computador: estrutura de arquivos, portão 18+ bilíngue, casca estilo Gwent, cena Three.js com o dado, cartão de resultado.
+2. Desenhar os 69 pictogramas SVG.
+3. Decidir a ferramenta de imagem e testar a política de conteúdo com 2–3 fichas.
