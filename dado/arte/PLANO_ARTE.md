@@ -3,7 +3,7 @@
 **Direção de arte:** Iara · **Escopo:** pictogramas das 69 posições, adaptação aos 4 temas, artes de apoio (face "?", cenário, moldura das faces, ícone, tela 18+) e checklist de produção.
 **Fontes:** `dado/arte/posicoes_insumo.md` (disposição dos corpos, dificuldade) e `dado/PLANO.md` (regras de conteúdo, tokens, performance).
 
-> **Princípio que manda em tudo:** isto é **sinalização**, não ilustração erótica. Cada arte tem de funcionar como a placa de um manual de ioga ou de um aeroporto: duas figuras adultas, sem rosto, sem nudez, sem anatomia sexual, lidas em meio segundo a 64 px. Se uma arte precisa de detalhe anatômico para ser entendida, a pose está mal resolvida — resolva pela silhueta, não pelo detalhe.
+> **Princípio que manda em tudo:** isto é **sinalização**, não ilustração erótica. Cada arte tem de funcionar como a placa de um manual de ioga ou de um aeroporto: duas personagens adultas **fictícias**, com rosto, mas sem nudez e sem anatomia sexual, lidas em meio segundo a 64 px. Se uma arte precisa de detalhe anatômico para ser entendida, a pose está mal resolvida — resolva pela silhueta, não pelo detalhe.
 
 ---
 
@@ -27,7 +27,7 @@ Unidade de medida: **H = altura da cabeça = 56 px** no canvas mestre (figura de
 
 | Parte | Forma | Medida |
 |---|---|---|
-| Cabeça | círculo **sem rosto** (sem olhos, boca, cabelo detalhado) | Ø 1 H |
+| Cabeça | círculo com **rosto simplificado** (olhos, sobrancelhas, boca em traços mínimos; cabelo como massa única) — ver §1.2.1 | Ø 1 H |
 | Pescoço | vão negativo (gap) de 0,25 H entre cabeça e tronco — a cabeça "flutua" | — |
 | Tronco | cápsula única (retângulo com cantos totalmente arredondados), levemente trapezoidal | 1,1 H larg. × 2,6 H alt. |
 | Quadril | fundido ao tronco (sem forma separada); indica-se só pela dobra da cápsula | — |
@@ -36,6 +36,17 @@ Unidade de medida: **H = altura da cabeça = 56 px** no canvas mestre (figura de
 | Perna | 2 cápsulas (coxa + canela) de largura 0,45 H afinando para 0,36 H | 1,8 H + 1,7 H |
 | Pé | cunha curta arredondada | 0,6 H |
 | Tecido (opcional) | camada de roupa/drapeado que cobre tronco até meio da coxa — forma lisa, sem vincos que sugiram anatomia | — |
+
+### 1.2.1 Rostos (personagens fictícias)
+As figuras **têm rosto**: são personagens adultas inventadas, com personalidade própria em cada tema.
+- **Dois níveis de detalhe:**
+  - **Ícone da face do dado (64–256 px):** rosto mínimo, com olhos em ponto/traço, sobrancelhas e boca em uma linha. Precisa ser legível e não pode poluir a silhueta.
+  - **Arte do cartão de resultado (1024 px):** rosto completo no estilo do tema, com olhos, nariz, boca, cabelo com mechas e expressão.
+- **Adultas sem ambiguidade:** traços de rosto maduro (maxilar e maçãs definidos, olhos em proporção adulta) e aparência de 25 a 45 anos. Nada de "cara de bebê", mesmo no anime.
+- **Expressões permitidas:** carinho, cumplicidade, sorriso, riso, olhar trocado entre os dois, concentração e olhos fechados em beijo ou abraço. **Proibidas:** expressões sexuais exageradas (gemido, boca aberta, "ahegao"), dor e medo.
+- **Fictícias de verdade:** nunca desenhar pessoas reais, celebridades ou personagens de franquias conhecidas. Nada de pedir "no estilo de" alguém real nos prompts.
+- **Diversidade:** alternar tons de pele, tipos de cabelo e corpos entre os pares ao longo das 69 fichas. Um "elenco" fixo de 3 ou 4 casais por tema dá consistência.
+- **Olhar:** na maioria das poses os dois se olham, o que reforça o tom de cumplicidade e ajuda a leitura da cena.
 
 Regras:
 - Tronco **neutro**: sem seios, sem cintura marcada, sem nádegas modeladas, sem volume na virilha. Mesma cápsula para A e B.
@@ -85,7 +96,7 @@ Formas simples, planas, na cor "cena" do tema (neutra, baixa saturação):
 - **Chão**: linha horizontal de 6 px, 50% opacidade, só quando necessário para leitura (poses de pé ou apoiadas no chão).
 
 ### 1.8 Proibições (valem para todos os temas)
-Nudez, genitais, mamilos, nádegas/virilha modeladas, pele realista, suor/fluidos, expressões faciais, rostos, lábios, línguas, lingerie, tecidos transparentes, sombras sugestivas, closes em regiões do corpo, figuras com proporção infantil, uniformes escolares, texto na arte, logos, símbolos religiosos.
+Nudez, genitais, mamilos, nádegas/virilha modeladas, pele realista, suor/fluidos, expressões faciais sexuais (gemido, boca aberta), semelhança com pessoas reais, línguas, lingerie, tecidos transparentes, sombras sugestivas, closes em regiões do corpo, figuras com proporção infantil, uniformes escolares, texto na arte, logos, símbolos religiosos.
 
 ---
 
@@ -104,12 +115,12 @@ O **pictograma-base vetorial** (SVG, figuras chapadas, fundo alfa) é único. Ca
 
 **Template de prompt:**
 ```
-Holographic tactical display pictogram, sci-fi military command console aesthetic, two faceless geometric mannequin figures made of glowing translucent light, Figure A in cyan (#29E6FF), Figure B in orange (#FF7A1A), chamfered capsule-shaped limbs, circular featureless heads, fully covered smooth armor-like bodies with no anatomical detail. Pose: {POSE_DESCRIPTION}. Clean vector-like silhouettes, thin neon outlines with soft bloom, subtle horizontal scanlines, minimal wireframe props in slate gray, centered composition within 60% of frame, transparent background, flat orthographic view, icon style, high legibility at small size.
+Holographic tactical display pictogram, sci-fi military command console aesthetic, two fictional adult characters rendered as glowing translucent holograms, with simple stylized adult faces and calm, affectionate expressions, Figure A in cyan (#29E6FF), Figure B in orange (#FF7A1A), chamfered capsule-shaped limbs, fully covered in smooth sci-fi flight suits with no anatomical detail. Pose: {POSE_DESCRIPTION}. Clean vector-like silhouettes, thin neon outlines with soft bloom, subtle horizontal scanlines, minimal wireframe props in slate gray, centered composition within 60% of frame, transparent background, flat orthographic view, icon style, high legibility at small size.
 ```
-**Negativos:** `nudity, naked, explicit, sexual, genitals, nipples, cleavage, buttocks detail, realistic skin, skin texture, face details, eyes, lips, facial expression, hair, child-like, childlike proportions, chibi, school uniform, logos, brand, text, letters, watermark, Blizzard, StarCraft, known characters, gore, weapons, sweat, fluids, photorealistic, cluttered background`
+**Negativos:** `nudity, naked, explicit, sexual, genitals, nipples, cleavage, buttocks detail, realistic skin, skin texture, baby face, youthful face, exaggerated sexual facial expression, ahegao, moaning, open mouth, real person likeness, celebrity, child-like, childlike proportions, chibi, school uniform, logos, brand, text, letters, watermark, Blizzard, StarCraft, known characters, gore, weapons, sweat, fluids, photorealistic, cluttered background`
 
 ### 2.2 Luz de Velas (realista)
-- **Leitura:** pequena escultura/relevo em metal nobre incrustada no mármore — **baixo-relevo dourado** e esmalte vinho. Realismo está no **material**, não nas figuras (as figuras continuam manequins lisos, como estatuetas art déco sem rosto).
+- **Leitura:** pequena escultura/relevo em metal nobre incrustada no mármore — **baixo-relevo dourado** e esmalte vinho. Realismo está no **material**, não nas figuras (as figuras são estatuetas art déco com rosto esculpido e sereno).
 - **Traço:** sem contorno de linha; a forma é definida por chanfro/bisel de 6 px com brilho especular quente no topo e sombra suave embaixo.
 - **Preenchimento:** A em ouro polido #C9A46A (realces #F1D9A6, sombras #8A6A3A); B em esmalte vinho #6E1E2A (realces #A33A4B, sombras #3A0E16) com filete de ouro 4 px.
 - **Cena:** objetos gravados em linha fina de ouro a 40% (como incisão no mármore).
@@ -118,36 +129,36 @@ Holographic tactical display pictogram, sci-fi military command console aestheti
 
 **Template de prompt:**
 ```
-Elegant bas-relief inlay pictogram, two faceless smooth mannequin figurines like art deco statuettes, Figure A in polished warm gold (#C9A46A), Figure B in deep wine-red enamel (#6E1E2A) with thin gold rim, featureless round heads, smooth capsule limbs, bodies fully covered and abstract with no anatomical detail. Pose: {POSE_DESCRIPTION}. Soft warm candlelight from upper left, subtle bevel and specular highlights, minimal engraved gold line props, centered within 60% of frame, transparent background, orthographic view, luxurious, understated, high legibility at small size.
+Elegant bas-relief inlay pictogram, two fictional adult figurines like art deco statuettes, with elegant sculpted adult faces and serene, tender expressions, Figure A in polished warm gold (#C9A46A), Figure B in deep wine-red enamel (#6E1E2A) with thin gold rim, sculpted hair, smooth stylized bodies fully covered by draped fabric with no anatomical detail. Pose: {POSE_DESCRIPTION}. Soft warm candlelight from upper left, subtle bevel and specular highlights, minimal engraved gold line props, centered within 60% of frame, transparent background, orthographic view, luxurious, understated, high legibility at small size.
 ```
-**Negativos:** `nudity, naked, explicit, sexual, erotic, genitals, nipples, cleavage, buttocks detail, realistic skin, flesh, skin pores, face details, eyes, lips, facial expression, hair strands, child-like, childlike proportions, logos, text, letters, watermark, lingerie, sheer fabric, sweat, photorealistic humans, bedroom scene, cluttered background`
+**Negativos:** `nudity, naked, explicit, sexual, erotic, genitals, nipples, cleavage, buttocks detail, realistic skin, flesh, skin pores, baby face, youthful face, exaggerated sexual facial expression, ahegao, moaning, open mouth, real person likeness, celebrity, child-like, childlike proportions, logos, text, letters, watermark, lingerie, sheer fabric, sweat, photorealistic humans, bedroom scene, cluttered background`
 
 ### 2.3 Miniatura (oriental clássico — miniatura indiana/mogol)
 - **Leitura:** pintura de miniatura em pergaminho: figuras em **vestes longas e drapeadas** (túnica e calça amplas, xale), perfil plano, contorno fino escuro, ouro em bordas de tecido.
 - **Traço:** contorno 6–8 px marrom-escuro #3B1E12, linha caligráfica (espessura variável ±20%).
-- **Preenchimento:** chapado com leve textura de papel; **A** em açafrão #E8A33D com bordas douradas #D4A017; **B** em turquesa #2A9D8F com bordas douradas. Tecido cobre do pescoço ao tornozelo; mangas longas. Cabeças como círculo liso com turbante/lenço simples geométrico opcional (sem rosto).
+- **Preenchimento:** chapado com leve textura de papel; **A** em açafrão #E8A33D com bordas douradas #D4A017; **B** em turquesa #2A9D8F com bordas douradas. Tecido cobre do pescoço ao tornozelo; mangas longas. Rostos de perfil no estilo da miniatura (olho amendoado, sorriso leve), com turbante/lenço simples opcional.
 - **Cena:** almofadas e tapetes com padrões geométricos (losangos, gregas, florais estilizados — sem símbolos religiosos), carmim #3B0D11.
 - **Efeitos:** textura de papel #F2E3C6, bordas de ouro em folha levemente craqueladas, sem sombras projetadas (perspectiva plana da miniatura).
 
 **Template de prompt:**
 ```
-Classical Indian Mughal miniature painting style pictogram, flat perspective, two faceless adult figures fully clothed in long draped robes, loose trousers and shawls, Figure A in saffron (#E8A33D), Figure B in turquoise (#2A9D8F), gold leaf trims (#D4A017), featureless round heads with simple plain head wraps, fine dark brown calligraphic outlines. Pose: {POSE_DESCRIPTION}. Simple geometric patterned cushions and rugs in crimson (#3B0D11), aged parchment texture (#F2E3C6), centered within 60% of frame, transparent background, decorative, elegant, high legibility at small size.
+Classical Indian Mughal miniature painting style pictogram, flat perspective, two fictional adult characters with classical miniature-style faces in profile, almond eyes and gentle smiles, fully clothed in long draped robes, loose trousers and shawls, Figure A in saffron (#E8A33D), Figure B in turquoise (#2A9D8F), gold leaf trims (#D4A017), dark hair with simple plain head wraps or ornaments, fine dark brown calligraphic outlines. Pose: {POSE_DESCRIPTION}. Simple geometric patterned cushions and rugs in crimson (#3B0D11), aged parchment texture (#F2E3C6), centered within 60% of frame, transparent background, decorative, elegant, high legibility at small size.
 ```
-**Negativos:** `nudity, naked, explicit, sexual, erotic, genitals, nipples, bare chest, cleavage, buttocks detail, realistic skin, face details, eyes, lips, facial expression, child-like, childlike proportions, religious symbols, deities, om, swastika, crescent, cross, temple idols, text, calligraphy text, letters, logos, watermark, sheer fabric, photorealistic, 3d render`
+**Negativos:** `nudity, naked, explicit, sexual, erotic, genitals, nipples, bare chest, cleavage, buttocks detail, realistic skin, baby face, youthful face, exaggerated sexual facial expression, ahegao, moaning, open mouth, real person likeness, celebrity, child-like, childlike proportions, religious symbols, deities, om, swastika, crescent, cross, temple idols, text, calligraphy text, letters, logos, watermark, sheer fabric, photorealistic, 3d render`
 
 ### 2.4 Kira (anime cel-shading)
-- **Leitura:** personagens-manequim estilo "cut-in" de anime, **adultos esguios** (8 H), vestidos com macacão/roupa esportiva lisa, sem rosto (cabeça lisa ou com viseira/capacete simples).
+- **Leitura:** personagens-manequim estilo "cut-in" de anime, **adultos esguios** (8 H), vestidos com macacão/roupa esportiva lisa, com rosto adulto de anime (maxilar definido, olhos de proporção adulta).
 - **Traço:** contorno preto #1A1024 grosso 14 px externo, 6 px interno; toon shading em **3 tons** (luz, meio, sombra) com recorte duro.
 - **Preenchimento:** A em rosa #FF3D8B (luz #FF8FBC, sombra #C21E64); B em ciano #3DDCFF (luz #A6F0FF, sombra #1A9CC2). Acento amarelo #FFD23F para setas/brilhos.
 - **Cena:** objetos em branco/lilás chapado com contorno 8 px, halftone leve.
 - **Efeitos:** brilho em estrela pequeno opcional, speed lines só no fundo do cartão (não no pictograma).
-- **Proporções:** obrigatoriamente adultas — ombros largos, pernas longas, cabeça ≤ 1/8 da altura. **Proibido** chibi, olhos grandes, rosto infantil, uniforme escolar (saia plissada, gravata, marinheiro), "moe".
+- **Proporções:** obrigatoriamente adultas — ombros largos, pernas longas, cabeça ≤ 1/8 da altura. **Proibido** chibi, olhos gigantes de estilo infantil, rosto infantil, uniforme escolar (saia plissada, gravata, marinheiro), "moe".
 
 **Template de prompt:**
 ```
-Anime cel-shaded pictogram, bold thick black outlines, three-tone hard shading, two faceless slender ADULT mannequin figures with 8-head-tall adult proportions, fully clothed in plain sporty jumpsuits, smooth featureless heads, Figure A in hot pink (#FF3D8B), Figure B in cyan (#3DDCFF), yellow accents (#FFD23F). Pose: {POSE_DESCRIPTION}. Simple flat props in pale lilac with black outline, light halftone, centered within 60% of frame, transparent background, clean dynamic icon, high legibility at small size.
+Anime cel-shaded pictogram, bold thick black outlines, three-tone hard shading, two fictional slender ADULT anime characters with 8-head-tall adult proportions and mature adult faces (defined jawline, adult eye proportions), playful affectionate expressions, fully clothed in plain sporty jumpsuits, stylish anime hair, Figure A in hot pink (#FF3D8B), Figure B in cyan (#3DDCFF), yellow accents (#FFD23F). Pose: {POSE_DESCRIPTION}. Simple flat props in pale lilac with black outline, light halftone, centered within 60% of frame, transparent background, clean dynamic icon, high legibility at small size.
 ```
-**Negativos:** `nudity, naked, explicit, sexual, ecchi, fan service, genitals, nipples, cleavage, panties, buttocks detail, realistic skin, face details, big eyes, blush, lips, facial expression, child-like, loli, shota, chibi, childlike proportions, petite, school uniform, sailor uniform, pleated skirt, known anime characters, logos, text, letters, speech bubble text, watermark`
+**Negativos:** `nudity, naked, explicit, sexual, ecchi, fan service, genitals, nipples, cleavage, panties, buttocks detail, realistic skin, baby face, youthful face, oversized childlike eyes, exaggerated sexual facial expression, ahegao, moaning, open mouth, real person likeness, celebrity, child-like, loli, shota, chibi, childlike proportions, petite, school uniform, sailor uniform, pleated skirt, known anime characters, logos, text, letters, speech bubble text, watermark`
 
 ### 2.5 Tabela-resumo de tokens `pictogram`
 | Token | Orbital | Velas | Miniatura | Kira |
@@ -200,7 +211,7 @@ Tamanhos: face "?" 1024² (alfa); textura de face do dado 512² por face no atla
 
 ## 4. Fichas das 69 posições
 
-Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição mais larga que alta. Todas as figuras seguem §1 (manequins sem rosto, cobertos/lisos, mesma altura). O contato sempre é descrito em áreas neutras.
+Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição mais larga que alta. Todas as figuras seguem §1 (personagens adultas fictícias com rosto, cobertas/lisas, mesma altura). O contato sempre é descrito em áreas neutras.
 
 ### 01 · Missionário — `missionario`
 - **Original:** Missionary · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -902,7 +913,7 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 3. **Pictograma-base vetorial das 69** (SVG, chapado, A/B em cinzas de teste #BBBBBB/#555555). Começar pelas ~24 do catálogo MVP; depois o resto em lotes de 15.
 4. **Revisão de pose** (checklist 5.5) e **teste de 64 px** em lote (folha de contato 8 × 9).
 5. **Tratamento por tema**: aplicar tokens (§2.5) via script sobre o SVG (cores, stroke, chanfro) → Luz de Velas primeiro (tema do MVP), depois Orbital, Miniatura, Kira.
-6. **Refinamento opcional por IA** usando o SVG como controle de pose + template + negativos do tema. Toda saída de IA passa de novo pela revisão 5.5 (a IA costuma "inventar" anatomia e rosto — rejeitar).
+6. **Refinamento opcional por IA** usando o SVG como controle de pose + template + negativos do tema. Toda saída de IA passa de novo pela revisão 5.5 (a IA costuma "inventar" anatomia e rostos com aparência jovem demais ou de gente real — rejeitar).
 7. **Artes do tema** (§3): face "?", textura das faces, fundo, ícone, 18+.
 8. **Atlas e integração**; teste no aparelho (iPhone, luz baixa e brilho alto).
 
@@ -930,7 +941,7 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 
 ### 5.5 Revisão de cada arte (portão de qualidade)
 - [ ] Duas figuras, **mesma altura**, proporção adulta (≥ 7 H; Kira 8 H).
-- [ ] **Sem rosto**, sem cabelo detalhado, sem expressão.
+- [ ] Rosto **claramente adulto**, fictício, com expressão de carinho/cumplicidade (nada de expressão sexual).
 - [ ] **Sem nudez / anatomia sexual**: tronco em cápsula neutra, tecido opaco (Miniatura/Kira), metal/holograma liso (Velas/Orbital).
 - [ ] Contatos só em áreas neutras (mãos, ombros, cintura, costas, joelhos, pés, canelas).
 - [ ] Nenhum texto, logo, marca, símbolo religioso, personagem existente.
@@ -944,7 +955,7 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 ### 5.6 O "teste do print em público"
 Antes de aprovar, imagine a arte **num print de tela aparecendo no grupo da família ou num slide de trabalho por engano**:
 1. Alguém que não conhece o app entenderia que é "dois bonequinhos de ioga/sinalização"? → **precisa ser sim.**
-2. Há algo que precisaria ser borrado (corpo, rosto, gesto)? → **precisa ser não.**
+2. Há algo que precisaria ser borrado (corpo, expressão, gesto)? → **precisa ser não.**
 3. O ícone e a tela inicial revelam o propósito do app? → **precisam ser neutros** (só o dado).
 4. O nome da posição no cartão é o único indicativo — e ele é leve e não gráfico? → sim.
 Se falhar em qualquer item: simplificar a pose, afastar as figuras (aumentar o respiro), cobrir mais (tecido), ou trocar o enquadramento (vista superior tende a ser mais abstrata).

@@ -4,8 +4,9 @@ Web app mobile-first (iPhone/Safari + PWA), Three.js, 100% local (sem backend).
 Consolidado a partir de duas revisões de especialistas: **Marina (UI)** e **Rafael (UX)**.
 
 ## Regras de conteúdo
-- Sem conteúdo sexual explícito: posições = **pictogramas geométricos abstratos** (silhuetas tipo sinalização, sem rosto, sem nudez) + nome + descrição curta não gráfica.
+- Sem conteúdo sexual explícito: posições = **pictogramas geométricos abstratos** (personagens adultas fictícias, com rosto, sem nudez) + nome + descrição curta não gráfica.
 - Temas são *inspirados em* estilos: nada de nomes, logos, fontes, sons ou personagens de terceiros (ex.: Blizzard/StarCraft).
+- Rostos permitidos: personagens fictícias, claramente adultas, com expressões de carinho/cumplicidade; nunca pessoas reais nem expressões sexuais.
 - Anime: só proporções adultas (proibido chibi, rosto infantil, uniforme escolar).
 - Oriental: só geometria, têxteis e ornamentos — sem símbolos religiosos.
 - Portão 18+ no primeiro acesso.
