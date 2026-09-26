@@ -1,181 +1,236 @@
 # Plano de Arte — "Dados"
 
-**Direção de arte:** Iara · **Escopo:** pictogramas das 69 posições, adaptação aos 4 temas, artes de apoio (face "?", cenário, moldura das faces, ícone, tela 18+) e checklist de produção.
-**Fontes:** `dado/arte/posicoes_insumo.md` (disposição dos corpos, dificuldade) e `dado/PLANO.md` (regras de conteúdo, tokens, performance).
+**Direção de arte:** Iara · **Escopo:** artes das 69 posições (pictograma da face do dado + ilustração do cartão), adaptação aos 4 temas, artes de apoio (face "?", cenário, moldura das faces, ícone, tela 18+) e checklist de produção.
+**Fontes:** `dado/arte/posicoes_insumo.md` (disposição dos corpos, dificuldade) e `dado/PLANO.md` (regras de conteúdo, Portão 18+, tokens, performance).
 
-> **Princípio que manda em tudo:** isto é **sinalização**, não ilustração erótica. Cada arte tem de funcionar como a placa de um manual de ioga ou de um aeroporto: duas personagens adultas **fictícias**, com rosto, mas sem nudez e sem anatomia sexual, lidas em meio segundo a 64 px. Se uma arte precisa de detalhe anatômico para ser entendida, a pose está mal resolvida — resolva pela silhueta, não pelo detalhe.
+> **Princípio que manda em tudo: nudez sugerida, nunca mostrada.** O jogo é entretenimento adulto para casais e fica atrás do Portão 18+. As artes podem e devem ser **sensuais**: pele quente, luz baixa, olhares intensos, lençóis que escorregam, sensação de antecipação. **Não podem ser explícitas.** A régua é a de uma capa de romance, de um editorial boudoir ou de uma campanha de perfume: o que fica escondido pesa mais do que o que aparece. Se uma arte precisa mostrar anatomia sexual ou o ato para ser entendida, a pose está mal resolvida: resolva pela silhueta, pelo tecido e pelo enquadramento.
+
+**Limites fixos (valem para tudo neste documento):**
+- **Permitido:** ombros, costas, braços, pernas, colo e a lateral do corpo à mostra; lingerie; pele com brilho quente; mãos na cintura, costas, coxas, rosto e cabelo; beijos; olhares de desejo e cumplicidade.
+- **Proibido:** genitais, mamilos, nádegas nuas em destaque, fluidos corporais de qualquer tipo, representação gráfica do ato sexual, penetração ou contato genital (nem descrito, nem sugerido por detalhe), expressões de clímax, aparência jovem, semelhança com pessoas reais.
+- **Personagens:** adultas **fictícias**, com aparência de 25 a 45 anos, sem presumir gênero (Figura A e Figura B).
+- **Portão:** conforme `PLANO.md`, nenhuma arte com personagens aparece antes da confirmação 18+. Ícone, splash e a própria tela do portão **nunca** mostram personagens.
 
 ---
 
-## 1. Bíblia de estilo dos pictogramas
+## 1. Bíblia de estilo
 
 ### 1.1 Canvas e grade
 | Item | Valor |
 |---|---|
 | Canvas mestre | 1024 × 1024 px (vetor em artboard 1024 × 1024 un.) |
-| Margem de segurança | 128 px em cada lado (12,5%) — nada de figura fora dela |
+| Margem de segurança | 128 px em cada lado (12,5%): nada de figura fora dela |
 | Área útil | quadrado central de **~620 × 620 px (~60% do lado)**, centrado; é o que cabe na face do dado depois do chanfro/moldura |
 | Grade | 16 × 16 módulos de 64 px; figuras encaixam em múltiplos de ½ módulo (32 px) |
 | Linha de base | "chão" implícito a 70% da altura da área útil para poses deitadas/sentadas; poses de pé usam a altura inteira |
 | Centro óptico | o centro de massa do par fica no centro da área útil, ± 1 módulo |
-| Fundo | **transparente** (alfa). Nenhuma cor de fundo no arquivo-base; o tema aplica fundo/placa |
+| Fundo | **transparente** (alfa) no pictograma; a ilustração do cartão pode ter fundo de cena do tema |
 
-**Orientação:** poses horizontais (deitadas) ocupam ~620 × 360 px; poses verticais (de pé) ~360 × 620 px; poses compactas (sentadas/ajoelhadas) ~520 × 520 px. O dado gira, então o pictograma **não** precisa de "lado de cima" absoluto, mas o chão, quando presente, fica sempre embaixo.
+**Orientação:** poses horizontais (deitadas) ocupam ~620 × 360 px; verticais (de pé) ~360 × 620 px; compactas (sentadas/ajoelhadas) ~520 × 520 px. O chão, quando presente, fica sempre embaixo.
 
-### 1.2 Gramática geométrica do manequim
-Unidade de medida: **H = altura da cabeça = 56 px** no canvas mestre (figura de pé ≈ 7,5 H ≈ 420 px — proporção adulta, nunca menos de 7 H).
+**Dois níveis de arte por posição:**
+| Nível | Onde aparece | Tamanho | Linguagem |
+|---|---|---|---|
+| **Pictograma** | face do dado, catálogo, histórico | 64–256 px | silhueta estilizada do casal com o lençol/tecido como forma de cor; rosto mínimo; sem pele detalhada |
+| **Ilustração do cartão** | cartão de resultado (bottom sheet) | 1024 px | cena sensual completa no estilo do tema: rosto, cabelo, pele, luz, tecidos, cobertura |
 
-| Parte | Forma | Medida |
+A pose é **a mesma** nos dois níveis: a ilustração nasce do pictograma (controle de pose), nunca o contrário.
+
+### 1.2 Gramática do corpo
+Unidade de medida: **H = altura da cabeça = 56 px** no canvas mestre (figura de pé ≈ 7,5 H ≈ 420 px; proporção adulta, nunca menos de 7 H; Kira 8 H).
+
+| Parte | Pictograma (dado) | Ilustração (cartão) |
 |---|---|---|
-| Cabeça | círculo com **rosto simplificado** (olhos, sobrancelhas, boca em traços mínimos; cabelo como massa única) — ver §1.2.1 | Ø 1 H |
-| Pescoço | vão negativo (gap) de 0,25 H entre cabeça e tronco — a cabeça "flutua" | — |
-| Tronco | cápsula única (retângulo com cantos totalmente arredondados), levemente trapezoidal | 1,1 H larg. × 2,6 H alt. |
-| Quadril | fundido ao tronco (sem forma separada); indica-se só pela dobra da cápsula | — |
-| Braço | 2 cápsulas (braço + antebraço) de largura 0,34 H, articulação em círculo | 1,3 H + 1,2 H |
-| Mão | extremidade arredondada da cápsula; sem dedos | — |
-| Perna | 2 cápsulas (coxa + canela) de largura 0,45 H afinando para 0,36 H | 1,8 H + 1,7 H |
-| Pé | cunha curta arredondada | 0,6 H |
-| Tecido (opcional) | camada de roupa/drapeado que cobre tronco até meio da coxa — forma lisa, sem vincos que sugiram anatomia | — |
+| Cabeça | círculo Ø 1 H com rosto mínimo (olhos em traço, boca em uma linha) e cabelo como massa única | rosto completo no estilo do tema (ver §1.2.1) |
+| Pescoço | vão de 0,25 H (a cabeça "flutua") | pescoço longo e adulto; bom lugar para mãos e beijos |
+| Tronco | cápsula única, levemente trapezoidal, 1,1 H × 2,6 H | corpo adulto estilizado, com ombros, clavículas, costas e cintura desenhados; áreas proibidas sempre cobertas (§1.3) |
+| Braços | 2 cápsulas de 0,34 H (1,3 H + 1,2 H), mão arredondada | braços e mãos com gesto: dedos na cintura, no cabelo, no rosto |
+| Pernas | 2 cápsulas de 0,45 → 0,36 H (1,8 H + 1,7 H), pé em cunha | pernas longas, linha da coxa e da panturrilha valorizadas |
+| Cobertura | **forma de cor** (lençol, tecido, lingerie) desenhada como uma peça sólida que atravessa quadril/tronco | tecido com dobras, caimento e brilho; sempre opaco sobre as áreas proibidas |
+
+Regras gerais:
+- Ângulos das articulações arredondados para múltiplos de **15°**.
+- Membros que se sobrepõem ao parceiro recebem **respiro de 8 px** no pictograma.
+- A e B têm **a mesma escala** (nunca uma figura visivelmente menor ou de aparência mais jovem).
+- Corpos adultos e **diversos** (tipos físicos, tons de pele, cabelos), sem exagero caricato de curvas.
 
 ### 1.2.1 Rostos (personagens fictícias)
-As figuras **têm rosto**: são personagens adultas inventadas, com personalidade própria em cada tema.
-- **Dois níveis de detalhe:**
-  - **Ícone da face do dado (64–256 px):** rosto mínimo, com olhos em ponto/traço, sobrancelhas e boca em uma linha. Precisa ser legível e não pode poluir a silhueta.
-  - **Arte do cartão de resultado (1024 px):** rosto completo no estilo do tema, com olhos, nariz, boca, cabelo com mechas e expressão.
-- **Adultas sem ambiguidade:** traços de rosto maduro (maxilar e maçãs definidos, olhos em proporção adulta) e aparência de 25 a 45 anos. Nada de "cara de bebê", mesmo no anime.
-- **Expressões: sensuais.** Olhar sedutor, olhos semicerrados, sorriso malicioso, lábios entreabertos, rubor, olhar intenso trocado entre os dois, olhos fechados em entrega ou beijo. Também valem carinho, riso e cumplicidade. **Fora:** expressões de clímax/orgasmo, dor e medo.
-- **Fictícias de verdade:** nunca desenhar pessoas reais, celebridades ou personagens de franquias conhecidas. Nada de pedir "no estilo de" alguém real nos prompts.
-- **Diversidade:** alternar tons de pele, tipos de cabelo e corpos entre os pares ao longo das 69 fichas. Um "elenco" fixo de 3 ou 4 casais por tema dá consistência.
-- **Olhar:** na maioria das poses os dois se olham, o que reforça o tom de cumplicidade e ajuda a leitura da cena.
+- **Adultas sem ambiguidade:** traços maduros (maxilar e maçãs definidos, olhos em proporção adulta), aparência de 25 a 45 anos. Nada de "cara de bebê", nem no anime.
+- **Expressões sensuais:** olhar sedutor, olhos semicerrados, sorriso malicioso, lábios entreabertos, rubor leve, olhar intenso trocado entre os dois, olhos fechados num beijo ou numa entrega tranquila. Também valem riso e cumplicidade. **Fora:** expressão de clímax/orgasmo, "ahegao", dor, medo, submissão forçada.
+- **Fictícias de verdade:** nunca desenhar pessoas reais, celebridades ou personagens de franquias. Nada de "no estilo de" uma pessoa real nos prompts.
+- **Elenco:** 3 ou 4 casais fixos por tema, alternados ao longo das 69 fichas, com diversidade de tons de pele e de tipos de cabelo e corpo. As combinações de casal não são presumidas pelas fichas.
+- **Consentimento visível:** os dois sempre engajados, olhando-se ou sorrindo, com as mãos em gesto de carinho ou convite. Nunca uma figura passiva, inconsciente ou "objeto".
 
-Regras:
-- Tronco **neutro**: sem seios, sem cintura marcada, sem nádegas modeladas, sem volume na virilha. Mesma cápsula para A e B.
-- Ângulos das articulações arredondados para múltiplos de **15°** (legibilidade e consistência entre fichas).
-- Membros que se sobrepõem ao parceiro recebem **gap de 8 px** (contorno "respiro" na cor do fundo/alfa) para separar as figuras.
-- Nenhuma figura em escala menor que a outra: A e B têm **a mesma altura** (evita leitura de criança/adulto e de gênero).
+### 1.3 Linguagem sensual
 
-### 1.3 Diferenciação A / B
-- **Figura A** = cor primária do tema (tom mais claro/quente). **Figura B** = cor secundária (tom mais escuro/frio). Contraste de luminância entre A e B ≥ 30% (teste em escala de cinza).
-- Quando uma figura fica **atrás** da outra, B recebe sobreposição com respiro; nunca misturar as cores.
-- Nada de símbolos de gênero, cabelo comprido/curto, roupas generificadas.
+#### 1.3.1 Princípios
+1. **Antecipação acima de ação.** Desenhe o segundo **antes**: o lençol que começa a escorregar, a mão que chega à cintura, o olhar antes do beijo. A imaginação do casal completa o resto; é isso que torna a imagem envolvente e não explícita.
+2. **O olhar conduz a leitura.** Os olhos de A e B formam uma linha de tensão; a composição coloca essa linha perto do terço superior. Um olhar direto para o espectador pode ser usado em no máximo 1 de cada 6 cartas, como "piscadela".
+3. **Pele pela luz, não pelo detalhe.** A sensualidade vem do brilho quente na curva do ombro, das costas e da coxa, não de detalhe anatômico.
+4. **Tecido como personagem.** Lençol, seda, camisa aberta e lingerie têm caimento, brilho e direção; eles "escondem contando uma história".
+5. **Composição em curva.** Prefira diagonais e curvas em S (costas arqueadas, pescoço inclinado, lençol em onda). Nada de ângulos voyeurísticos (vista por baixo, fechamento em partes do corpo).
+6. **Cumplicidade.** Os dois são protagonistas com a mesma importância; nada de um corpo exibido e outro apenas "observando".
 
-### 1.4 Traço
+#### 1.3.2 Técnicas de cobertura (implied nudity)
+| Técnica | Como usar | Folga mínima |
+|---|---|---|
+| **Lençol / manta** | peça principal: atravessa o quadril dos dois em diagonal, forma uma massa contínua que une as figuras; ponta caindo da cama dá movimento | borda ≥ 0,5 H além da área a cobrir |
+| **Tecido / roupa** | camisa aberta nos ombros, robe caindo das costas, xale, vestido com alça solta, lingerie **opaca** | tecido opaco; nada de transparência sobre área proibida |
+| **Cabelo** | mechas longas caindo sobre o colo ou o ombro; complementa, **nunca** é a única cobertura | só como reforço |
+| **Sombra** | low key: a área a ocultar cai em sombra profunda, sem detalhe e sem contorno sugestivo | sombra ≥ 90% escura e sem forma anatômica |
+| **Corpo do parceiro** | o tronco, a perna ou o braço de uma figura cobre a outra (abraço, colo, conchinha) | sobreposição sólida, sem "fresta" |
+| **Objetos** | almofada, travesseiro, braço do sofá, encosto da cadeira, degrau | objeto em primeiro plano |
+| **Enquadramento** | corte do quadro (ilustração do cartão): recorte na altura da cintura ou do joelho em poses verticais; nunca close em zona proibida | corte fora das áreas proibidas |
+
+Regras de cobertura:
+- **Sempre com folga.** Cobertura "no limite", que depende de um pixel, reprova.
+- **Duas camadas nas intensidades 2–3:** ex.: lençol + corpo do parceiro, ou tecido + sombra.
+- **Pontos de encaixe entre os corpos** (quadril com quadril) ficam **sempre** sob lençol, tecido ou corpo do parceiro, sem detalhe algum; a leitura da pose vem da geometria geral.
+- **Nádegas:** a lateral do quadril pode aparecer em silhueta; nádegas nuas em destaque, não. Use lençol na altura da lombar ou lingerie.
+- **Nada molhado:** sem aspecto de suor, óleo escorrendo ou gotas; o brilho é **luz**, não líquido.
+
+#### 1.3.3 Luz
+- **Chave quente e baixa:** 2200–2800 K (vela, abajur, pôr do sol); low key com 60–70% da imagem em meio-tom ou sombra.
+- **Contraluz (rim light):** desenha o contorno dos ombros, costas e pernas; é o principal recurso para a silhueta ler bem sem mostrar detalhe.
+- **Queda de luz:** o ponto mais claro fica nos **rostos e ombros**; o quadril e o centro das figuras ficam mais escuros (a luz também cobre).
+- **Por tema:** Orbital = chave laranja + contraluz ciano; Velas = vela lateral 2200 K + reflexo dourado; Miniatura = luz chapada de fim de tarde (sem sombras projetadas, a cobertura é por tecido); Kira = toon de 3 tons com contraluz rosa/ciano.
+
+#### 1.3.4 Paleta de pele
+Faixa base (use todas ao longo do elenco): `#F3D5C0` · `#E6BA9A` · `#C98E66` · `#A56A43` · `#7B4A2E` · `#4E2E1E`.
+- **Realce quente (sheen):** +8% de luz, deslocado para âmbar (`#FFD9A8` a 30% em overlay) só em ombros, clavícula, costas e canela/coxa.
+- **Sombra:** deslocada para o vinho/violeta do tema, nunca cinza (pele "viva").
+- **Rubor:** faces e ponta do nariz, suave (`#E0707A` a 15–20%).
+- **Proibido:** pele oleosa ou molhada, poros e marcas hiper-realistas, textura que pareça foto.
+- **Pictograma:** a pele não entra; A e B usam as cores do tema (§1.4) e o lençol entra como terceira cor.
+
+#### 1.3.5 Níveis de intensidade visual (alinhados à intensidade da posição)
+| Nível | Posições | Pele à mostra | Cobertura | Luz | Expressão |
+|---|---|---|---|---|---|
+| **1 · Romântico** | intensidade 1 | ombros, braços, pernas; costas parcialmente | lingerie, camisa aberta ou lençol até o peito; muito tecido | quente e suave, sombras leves | sorriso, olhar terno, testa com testa, beijo leve |
+| **2 · Sensual** | intensidade 2 | ombros e costas inteiras, pernas, colo, lateral do tronco | lençol na altura do quadril + corpo do parceiro | low key, contraluz marcado | olhar intenso, olhos semicerrados, lábios entreabertos |
+| **3 · Ardente** | intensidade 3 | mais extensão de pele (linha lateral inteira do corpo, pernas) em pose atlética | lençol mínimo porém com folga + sombra profunda + corpo do parceiro (duas camadas) | alto contraste, fundo quase preto, contraluz forte | olhar de desafio, sorriso cúmplice, concentração |
+
+O nível 3 é mais ousado em **energia, contraste e pose**, nunca em anatomia: os limites da seção de abertura valem igual.
+
+### 1.4 Diferenciação A / B
+- **Pictograma:** Figura A = cor primária do tema (mais clara/quente); Figura B = cor secundária (mais escura/fria); lençol/tecido = terceira cor do tema. Contraste de luminância entre A e B ≥ 30% (teste em escala de cinza).
+- **Ilustração:** A e B se distinguem pela **cor do tecido/lingerie** (cores A/B do tema) e pela **cor do contraluz** (A = acento quente, B = acento frio), além das diferenças naturais do elenco.
+- Nada de símbolos de gênero; as fichas descrevem só geometria.
+
+### 1.5 Traço
 | Contexto | Espessura (mestre 1024) |
 |---|---|
-| Contorno externo da figura (quando o tema usa contorno) | 12 px |
-| Linhas internas (separação de membros) | 6 px |
-| Respiro entre figuras | 8 px |
-| Objetos de cena | 8 px, ou preenchimento a 35% de opacidade |
+| Contorno externo (temas com contorno) | 12 px (Kira 14 px) |
+| Linhas internas | 6 px |
+| Respiro entre figuras (pictograma) | 8 px |
+| Borda do lençol/tecido | 6 px, cor do tema, com 1 dobra indicada |
+| Objetos de cena | 8 px, ou preenchimento a 35% |
 | Setas de movimento | 6 px, ponta 24 px |
-Pontas e junções **arredondadas** (round cap / round join).
+Pontas e junções **arredondadas**.
 
-### 1.5 Legibilidade em 64 px (teste obrigatório)
-Reduza para 64 × 64 e verifique:
-1. As **duas cabeças** são visíveis e separadas (Ø ≥ 3,5 px).
-2. A **silhueta-chave** da ficha é reconhecível em preto chapado (teste de "sombra").
-3. Nenhum detalhe interno < 1 px sobrevive — se sumir, remova no mestre.
-4. Objetos de cena não competem com as figuras (opacidade ≤ 40% ou só contorno).
-5. A e B distinguíveis em escala de cinza.
-Regra prática: **no máximo 3 membros "livres"** (que não seguem o eixo do corpo) por figura.
+### 1.6 Legibilidade em 64 px (teste obrigatório do pictograma)
+1. As **duas cabeças** visíveis e separadas (Ø ≥ 3,5 px).
+2. A **silhueta-chave** da ficha reconhecível em preto chapado.
+3. O **lençol** lê como uma forma única (não fragmentado em pedaços).
+4. Nenhum detalhe < 1 px; objetos de cena com opacidade ≤ 40%.
+5. A, B e lençol distinguíveis em escala de cinza.
+Regra prática: **no máximo 3 membros "livres"** por figura.
 
-### 1.6 Direção e movimento
-- **Setas sutis opcionais**, só quando o movimento define a posição (ex.: Pião, Gangorra, Onda, Cavalo de balanço, Balanço, Alinhamento, Bambu partido).
-- Seta = arco de 30–60° com ponta aberta, a 24 px da figura, opacidade 60%, cor do "acento" do tema.
-- Movimento de vai-e-vem: seta dupla curta (↔ curva). Rotação: arco de 270°. Alternância: dois pequenos arcos opostos.
-- Nunca usar linhas de impacto, gotas, corações ou símbolos que sexualizem a leitura.
+### 1.7 Direção e movimento
+- **Setas sutis opcionais** só quando o movimento define a posição (Pião, Gangorra, Onda, Cavalo de balanço, Balanço, Alinhamento, Bambu partido).
+- Seta = arco de 30–60°, ponta aberta, a 24 px da figura, 60% de opacidade, cor de acento do tema. Vai e vem: seta dupla curva. Rotação: arco de 270°.
+- Na ilustração, o movimento vem do **tecido** (lençol em onda, cabelo em movimento), não de setas.
+- Nunca: linhas de impacto, gotas, onomatopeias, símbolos gráficos de excitação.
 
-### 1.7 Objetos de cena
-Formas simples, planas, na cor "cena" do tema (neutra, baixa saturação):
-- **Cama/colchão**: retângulo arredondado de 1 H de altura; borda da cama = canto vivo em 90°.
-- **Cadeira**: assento (retângulo) + encosto (retângulo vertical) + 2 pernas (linhas).
-- **Parede**: faixa vertical de 0,5 H de largura na lateral da área útil.
-- **Mesa**: tampo (faixa de 0,4 H) + 2 pernas.
-- **Almofada**: elipse achatada 2 H × 0,8 H.
-- **Degrau/escada**: 3 degraus em "L" repetidos de 1 H × 1 H.
-- **Sofá (braço)**: forma em "U" deitado, braço arredondado de 1,5 H.
-- **Chão**: linha horizontal de 6 px, 50% opacidade, só quando necessário para leitura (poses de pé ou apoiadas no chão).
+### 1.8 Objetos de cena
+Formas simples no pictograma; na ilustração ganham material do tema.
+- **Cama:** retângulo arredondado de 1 H; borda em canto vivo; na ilustração, lençóis amarrotados e travesseiros.
+- **Cadeira**, **parede**, **mesa**, **almofada** (elipse 2 H × 0,8 H), **degraus** (L de 1 H), **sofá** (braço arredondado 1,5 H), **chão** (linha de 6 px a 50%).
 
-### 1.8 Proibições (valem para todos os temas)
-Nudez, genitais, mamilos, nádegas/virilha modeladas, pele realista, suor/fluidos, expressões de clímax/orgasmo, semelhança com pessoas reais, línguas, lingerie, tecidos transparentes, sombras sugestivas, closes em regiões do corpo, figuras com proporção infantil, uniformes escolares, texto na arte, logos, símbolos religiosos.
+### 1.9 Proibições (valem para todos os temas)
+Genitais; mamilos (inclusive marcados sob tecido); nádegas nuas em destaque; fluidos corporais de qualquer tipo (inclusive suor escorrendo, gotas, "wet look"); representação gráfica do ato sexual; penetração ou contato genital descrito ou insinuado por detalhe; expressões de clímax/orgasmo/"ahegao"; aparência jovem, proporção infantil, uniformes escolares, cenários infantis; semelhança com pessoas reais ou celebridades; personagens de franquias; tecido transparente sobre áreas proibidas; ângulos voyeurísticos e closes em partes do corpo; violência, amarras, dor; texto na arte, logos, símbolos religiosos.
 
 ---
 
 ## 2. Adaptação por tema
 
-O **pictograma-base vetorial** (SVG, figuras chapadas, fundo alfa) é único. Cada tema aplica um "tratamento" por cima dele, sem alterar a pose. A geração por IA é **opcional** e serve para texturizar/estilizar; o desenho da pose vem sempre do vetor (use-o como controle de pose/linha — ex.: ControlNet de lineart ou img2img com força baixa).
+O **pictograma-base vetorial** (SVG, chapado, fundo alfa) é único e fixa a pose. A **ilustração do cartão** é produzida por tema a partir dele (pintura digital ou IA com o SVG como controle de pose, ex.: ControlNet de pose/lineart ou img2img de força baixa) e sempre passa pela revisão §5.5.
+
+Nos templates, `{POSE_DESCRIPTION}` vem da ficha; `{INTENSITY_MOOD}` recebe a linha do nível correspondente:
+- **1:** `romantic and tender mood, soft warm light, plenty of drapery, gentle smiles`
+- **2:** `sensual mood, low-key warm light with strong rim light, sheet draped at hip level, intense eye contact, half-lidded eyes`
+- **3:** `smoldering, high-contrast mood, near-black background, bold rim light, athletic pose, sheet and deep shadow covering the hips, playful daring glances`
+
+**Negativos comuns a todos os temas** (sempre presentes):
+`genitals, nipples, explicit sex, penetration, bodily fluids, cum, sweat drips, orgasm face, ahegao, childlike, baby face, youthful face, real person likeness, celebrity, logos`
+Mais os específicos de cada tema, abaixo.
 
 ### 2.1 Comando Orbital (sci-fi militar RTS)
-- **Leitura:** holograma tático projetado sobre placa de metal — as figuras são "manequins de treinamento" de um console de comando.
-- **Traço:** contorno 12 px em neon com glow externo (blur 16 px, 60%); linhas internas finas 4 px; cantos das cápsulas levemente **chanfrados** (octogonais) em vez de redondos.
-- **Preenchimento:** gradiente vertical translúcido (80% → 35% de opacidade) + scanlines horizontais a cada 8 px (10% opacidade).
-- **Figura A:** ciano #29E6FF (preench. #29E6FF a 55%, contorno #9FF6FF). **Figura B:** laranja #FF7A1A (preench. a 55%, contorno #FFC08A).
-- **Cena:** objetos em wireframe cinza-azulado #3A4A5C, grade hexagonal fraca.
-- **Efeitos:** leve aberração cromática (1 px), cantoneiras de mira nos 4 cantos da área útil (fora da figura), ruído digital sutil.
-- **Materiais do entorno:** aço escovado escuro #1A2029, rebites, placas chanfradas.
+- **Leitura:** uma cabine de nave em luz de emergência depois do turno: duas oficiais/pilotos fictícias com o **macacão de voo aberto e arriado até a cintura**, regata tática, **manta térmica metalizada** fazendo o papel do lençol. Pele banhada em laranja com contraluz ciano; painéis holográficos ao fundo.
+- **Pictograma (dado):** holograma: contorno neon 12 px com glow; A ciano #29E6FF, B laranja #FF7A1A, manta em prata-azulada #9FB3C8; scanlines; cantos chanfrados.
+- **Ilustração:** pintura digital semirrealista estilo key art de RTS: metal escovado, luz emissiva, bloom leve. A usa acessórios/contraluz ciano, B laranja. Cama = beliche/leito de cabine com manta metalizada.
+- **Materiais do entorno:** aço escovado #1A2029, rebites, telas holográficas sem texto legível.
+- **Sem:** nomes, logos, uniformes, raças ou personagens da Blizzard/StarCraft.
 
 **Template de prompt:**
 ```
-Holographic tactical display pictogram, sci-fi military command console aesthetic, two fictional adult characters rendered as glowing translucent holograms, with stylized adult faces and sensual, seductive expressions (half-lidded eyes, knowing smile), Figure A in cyan (#29E6FF), Figure B in orange (#FF7A1A), chamfered capsule-shaped limbs, fully covered in smooth sci-fi flight suits with no anatomical detail. Pose: {POSE_DESCRIPTION}. Clean vector-like silhouettes, thin neon outlines with soft bloom, subtle horizontal scanlines, minimal wireframe props in slate gray, centered composition within 60% of frame, transparent background, flat orthographic view, icon style, high legibility at small size.
+Sensual sci-fi key art, painterly semi-realistic style of a military real-time-strategy game, dim starship cabin lit by warm orange emergency light and cool cyan holographic rim light, two fictional adult characters in their 30s with mature adult faces, flight suits unzipped and lowered to the waist, bare shoulders and backs, tactical tank tops, a metallic thermal blanket draped across their hips as implied nudity, tasteful boudoir composition. Figure A accented in cyan (#29E6FF), Figure B accented in orange (#FF7A1A). Pose: {POSE_DESCRIPTION}. {INTENSITY_MOOD}. Brushed steel, rivets, soft bloom, glowing screens without readable text, centered composition, not explicit.
 ```
-**Negativos:** `nudity, naked, explicit, sexual, genitals, nipples, cleavage, buttocks detail, realistic skin, skin texture, baby face, youthful face, orgasm face, ahegao, real person likeness, celebrity, child-like, childlike proportions, chibi, school uniform, logos, brand, text, letters, watermark, Blizzard, StarCraft, known characters, gore, weapons, sweat, fluids, photorealistic, cluttered background`
+**Negativos:** `genitals, nipples, explicit sex, penetration, bodily fluids, cum, sweat drips, orgasm face, ahegao, childlike, baby face, youthful face, real person likeness, celebrity, logos, nudity, exposed buttocks, see-through fabric, wet skin, oily skin, gore, weapons pointed, Blizzard, StarCraft, known characters, text, letters, watermark, cluttered background`
 
 ### 2.2 Luz de Velas (realista)
-- **Leitura:** pequena escultura/relevo em metal nobre incrustada no mármore — **baixo-relevo dourado** e esmalte vinho. Realismo está no **material**, não nas figuras (as figuras são estatuetas art déco com rosto esculpido e sereno).
-- **Traço:** sem contorno de linha; a forma é definida por chanfro/bisel de 6 px com brilho especular quente no topo e sombra suave embaixo.
-- **Preenchimento:** A em ouro polido #C9A46A (realces #F1D9A6, sombras #8A6A3A); B em esmalte vinho #6E1E2A (realces #A33A4B, sombras #3A0E16) com filete de ouro 4 px.
-- **Cena:** objetos gravados em linha fina de ouro a 40% (como incisão no mármore).
-- **Efeitos:** luz de vela lateral quente (2700 K) vindo de cima-esquerda, reflexo suave, micro-riscos no metal; sem bloom forte.
-- **Materiais do entorno:** mármore negro #0E0C0D com veios dourados.
+- **Leitura:** editorial **boudoir** pintado: quarto à luz de velas, lençóis de seda vinho, pele dourada, mármore negro e ouro. É o tema mais "fotográfico" e por isso o mais rigoroso na cobertura.
+- **Pictograma (dado):** baixo-relevo: A em ouro polido #C9A46A, B em esmalte vinho #6E1E2A com filete de ouro, lençol em marfim #E9DCC3 a 70%; bisel de 6 px, luz de vela vinda de cima à esquerda.
+- **Ilustração:** pintura digital realista-pictórica (não fotografia), pinceladas suaves, chiaroscuro. A com seda/lingerie dourada, B com seda/lingerie vinho. Lençol de cetim marfim ou vinho em dobras grandes.
+- **Efeitos:** bokeh de velas, reflexo no mármore, grão fino; nada de bloom forte.
 
 **Template de prompt:**
 ```
-Elegant bas-relief inlay pictogram, two fictional adult figurines like art deco statuettes, with elegant sculpted adult faces and sensual expressions (half-lidded eyes, softly parted lips), Figure A in polished warm gold (#C9A46A), Figure B in deep wine-red enamel (#6E1E2A) with thin gold rim, sculpted hair, smooth stylized bodies fully covered by draped fabric with no anatomical detail. Pose: {POSE_DESCRIPTION}. Soft warm candlelight from upper left, subtle bevel and specular highlights, minimal engraved gold line props, centered within 60% of frame, transparent background, orthographic view, luxurious, understated, high legibility at small size.
+Tasteful boudoir oil-painting style illustration, intimate bedroom lit only by candlelight (2200K), black marble with gold veins and deep wine-red velvet, two fictional adult characters in their 30s with elegant mature faces, bare shoulders and backs glowing in warm golden light, satin sheets draped across their hips as implied nudity, Figure A in gold silk (#C9A46A), Figure B in wine-red silk (#6E1E2A). Pose: {POSE_DESCRIPTION}. {INTENSITY_MOOD}. Chiaroscuro, soft brushwork, candle bokeh, luxurious and understated, painterly not photographic, centered composition, not explicit.
 ```
-**Negativos:** `nudity, naked, explicit, sexual, erotic, genitals, nipples, cleavage, buttocks detail, realistic skin, flesh, skin pores, baby face, youthful face, orgasm face, ahegao, real person likeness, celebrity, child-like, childlike proportions, logos, text, letters, watermark, lingerie, sheer fabric, sweat, photorealistic humans, bedroom scene, cluttered background`
+**Negativos:** `genitals, nipples, explicit sex, penetration, bodily fluids, cum, sweat drips, orgasm face, ahegao, childlike, baby face, youthful face, real person likeness, celebrity, logos, nudity, exposed buttocks, see-through lingerie, wet skin, oily skin, skin pores, photograph, photorealistic, hyperrealistic, harsh flash, text, letters, watermark, cluttered background`
 
 ### 2.3 Miniatura (oriental clássico — miniatura indiana/mogol)
-- **Leitura:** pintura de miniatura em pergaminho: figuras em **vestes longas e drapeadas** (túnica e calça amplas, xale), perfil plano, contorno fino escuro, ouro em bordas de tecido.
-- **Traço:** contorno 6–8 px marrom-escuro #3B1E12, linha caligráfica (espessura variável ±20%).
-- **Preenchimento:** chapado com leve textura de papel; **A** em açafrão #E8A33D com bordas douradas #D4A017; **B** em turquesa #2A9D8F com bordas douradas. Tecido cobre do pescoço ao tornozelo; mangas longas. Rostos de perfil no estilo da miniatura (olho amendoado, olhar sensual), com turbante/lenço simples opcional.
-- **Cena:** almofadas e tapetes com padrões geométricos (losangos, gregas, florais estilizados — sem símbolos religiosos), carmim #3B0D11.
-- **Efeitos:** textura de papel #F2E3C6, bordas de ouro em folha levemente craqueladas, sem sombras projetadas (perspectiva plana da miniatura).
+- **Leitura:** a tradição das miniaturas de **amantes num terraço ao entardecer**: vestes finas e opacas escorregando dos ombros, xales, joias, almofadas bordadas, perfil plano, contorno caligráfico, folha de ouro. A sensualidade é de gesto e de olhar (olho amendoado, mãos entrelaçadas).
+- **Pictograma (dado):** chapado sobre papel: A açafrão #E8A33D, B turquesa #2A9D8F, xale/lençol em carmim #3B0D11 com borda ouro #D4A017; contorno #3B1E12 caligráfico.
+- **Ilustração:** miniatura completa com terraço, treliça jaali, almofadas e tapetes geométricos; sem sombras projetadas (a cobertura é feita por tecido e pela sobreposição dos corpos, nunca por sombra).
+- **Sem:** símbolos religiosos, divindades, templos, escrita.
 
 **Template de prompt:**
 ```
-Classical Indian Mughal miniature painting style pictogram, flat perspective, two fictional adult characters with classical miniature-style faces in profile, almond eyes and sensual, knowing glances, fully clothed in long draped robes, loose trousers and shawls, Figure A in saffron (#E8A33D), Figure B in turquoise (#2A9D8F), gold leaf trims (#D4A017), dark hair with simple plain head wraps or ornaments, fine dark brown calligraphic outlines. Pose: {POSE_DESCRIPTION}. Simple geometric patterned cushions and rugs in crimson (#3B0D11), aged parchment texture (#F2E3C6), centered within 60% of frame, transparent background, decorative, elegant, high legibility at small size.
+Romantic classical Indian Mughal miniature painting, flat perspective, lovers on a palace terrace at dusk, two fictional adult characters with mature faces in classical profile, almond eyes and knowing glances, fine opaque silk garments slipping off the shoulders, shawls, jewelry, a crimson embroidered shawl (#3B0D11) draped across their hips as implied nudity, Figure A in saffron (#E8A33D), Figure B in turquoise (#2A9D8F), gold leaf trims (#D4A017), fine calligraphic outlines. Pose: {POSE_DESCRIPTION}. {INTENSITY_MOOD}. Geometric patterned cushions and rugs, jaali lattice, aged parchment texture (#F2E3C6), elegant, not explicit.
 ```
-**Negativos:** `nudity, naked, explicit, sexual, erotic, genitals, nipples, bare chest, cleavage, buttocks detail, realistic skin, baby face, youthful face, orgasm face, ahegao, real person likeness, celebrity, child-like, childlike proportions, religious symbols, deities, om, swastika, crescent, cross, temple idols, text, calligraphy text, letters, logos, watermark, sheer fabric, photorealistic, 3d render`
+**Negativos:** `genitals, nipples, explicit sex, penetration, bodily fluids, cum, sweat drips, orgasm face, ahegao, childlike, baby face, youthful face, real person likeness, celebrity, logos, nudity, bare chest, exposed buttocks, sheer fabric, see-through fabric, religious symbols, deities, om, swastika, crescent, cross, temple, idols, calligraphy text, letters, watermark, photorealistic, 3d render`
 
 ### 2.4 Kira (anime cel-shading)
-- **Leitura:** personagens-manequim estilo "cut-in" de anime, **adultos esguios** (8 H), vestidos com macacão/roupa esportiva lisa, com rosto adulto de anime (maxilar definido, olhos de proporção adulta).
-- **Traço:** contorno preto #1A1024 grosso 14 px externo, 6 px interno; toon shading em **3 tons** (luz, meio, sombra) com recorte duro.
-- **Preenchimento:** A em rosa #FF3D8B (luz #FF8FBC, sombra #C21E64); B em ciano #3DDCFF (luz #A6F0FF, sombra #1A9CC2). Acento amarelo #FFD23F para setas/brilhos.
-- **Cena:** objetos em branco/lilás chapado com contorno 8 px, halftone leve.
-- **Efeitos:** brilho em estrela pequeno opcional, speed lines só no fundo do cartão (não no pictograma).
-- **Proporções:** obrigatoriamente adultas — ombros largos, pernas longas, cabeça ≤ 1/8 da altura. **Proibido** chibi, olhos gigantes de estilo infantil, rosto infantil, uniforme escolar (saia plissada, gravata, marinheiro), "moe".
+- **Leitura:** anime **romântico adulto** (estilo josei/romance de escritório): personagens esguias de 8 H, rostos maduros, camisa social grande aberta nos ombros, lingerie opaca, lençóis amarrotados, rubor e olhares, brilhos em estrela. Energia divertida e provocante.
+- **Pictograma (dado):** contorno preto 14 px, toon de 3 tons; A rosa #FF3D8B, B ciano #3DDCFF, lençol branco-lilás #E9DDF7; acento amarelo #FFD23F.
+- **Ilustração:** cel-shading de 3 tons, contorno grosso, fundo com halftone e speed lines suaves, contraluz rosa/ciano.
+- **Proporções:** obrigatoriamente adultas: ombros largos, pernas longas, cabeça ≤ 1/8 da altura, rosto de maxilar definido. **Proibido** chibi, olhos gigantes infantis, "moe", uniforme escolar, cenário escolar, corpo de aparência adolescente.
 
 **Template de prompt:**
 ```
-Anime cel-shaded pictogram, bold thick black outlines, three-tone hard shading, two fictional slender ADULT anime characters with 8-head-tall adult proportions and mature adult faces (defined jawline, adult eye proportions), flirtatious, sensual expressions with blush and half-lidded eyes, fully clothed in plain sporty jumpsuits, stylish anime hair, Figure A in hot pink (#FF3D8B), Figure B in cyan (#3DDCFF), yellow accents (#FFD23F). Pose: {POSE_DESCRIPTION}. Simple flat props in pale lilac with black outline, light halftone, centered within 60% of frame, transparent background, clean dynamic icon, high legibility at small size.
+Adult romance anime illustration, josei style, cel-shaded with bold thick black outlines and three-tone hard shading, two fictional slender ADULT characters in their late 20s to 30s with 8-head-tall adult proportions and mature faces (defined jawline, adult eye proportions), blushing, flirtatious half-lidded glances, oversized open dress shirt slipping off the shoulders, opaque lingerie, rumpled white sheets draped across their hips as implied nudity, Figure A accented in hot pink (#FF3D8B), Figure B accented in cyan (#3DDCFF), yellow sparkle accents (#FFD23F). Pose: {POSE_DESCRIPTION}. {INTENSITY_MOOD}. Pink and cyan rim light, light halftone background, not explicit.
 ```
-**Negativos:** `nudity, naked, explicit, sexual, ecchi, fan service, genitals, nipples, cleavage, panties, buttocks detail, realistic skin, baby face, youthful face, oversized childlike eyes, orgasm face, ahegao, real person likeness, celebrity, child-like, loli, shota, chibi, childlike proportions, petite, school uniform, sailor uniform, pleated skirt, known anime characters, logos, text, letters, speech bubble text, watermark`
+**Negativos:** `genitals, nipples, explicit sex, penetration, bodily fluids, cum, sweat drips, orgasm face, ahegao, childlike, baby face, youthful face, real person likeness, celebrity, logos, nudity, ecchi, hentai, fan service close-up, exposed buttocks, panty shot, see-through fabric, loli, shota, chibi, moe, oversized childlike eyes, petite childlike body, school uniform, sailor uniform, pleated skirt, classroom, known anime characters, text, speech bubble text, watermark`
 
 ### 2.5 Tabela-resumo de tokens `pictogram`
 | Token | Orbital | Velas | Miniatura | Kira |
 |---|---|---|---|---|
 | `colorA` | #29E6FF | #C9A46A | #E8A33D | #FF3D8B |
 | `colorB` | #FF7A1A | #6E1E2A | #2A9D8F | #3DDCFF |
+| `colorSheet` | #9FB3C8 | #E9DCC3 | #3B0D11 (borda #D4A017) | #E9DDF7 |
 | `stroke` | #9FF6FF / #FFC08A (neon) | nenhum (bisel) | #3B1E12 | #1A1024 |
 | `strokeW` (1024) | 12 | 0 | 7 | 14 |
 | `prop` | #3A4A5C wire | ouro 40% | #3B0D11 padrão | #E9DDF7 + contorno |
-| `accent` (setas) | #29E6FF | #F1D9A6 | #D4A017 | #FFD23F |
-| `corner` | chanfrado 45° | redondo | redondo | redondo |
+| `accent` | #29E6FF | #F1D9A6 | #D4A017 | #FFD23F |
+| `keyLight` / `rimLight` (cartão) | #FF9A4A / #29E6FF | #FFB866 / #F1D9A6 | chapada #F7D9A0 | #FF8FBC / #A6F0FF |
 
 ---
 
 ## 3. Artes do tema além das posições
 
-Tamanhos: face "?" 1024² (alfa); textura de face do dado 512² por face no atlas 1024² (ver §5); fundo 1170 × 2532 (retrato iPhone) + versão 2048² tileável quando aplicável; ícone 1024² (sem alfa, cantos quadrados — o iOS arredonda); tela 18+ 1170 × 2532.
+Tamanhos: face "?" 1024² (alfa); textura de face do dado 512² por face no atlas 1024² (ver §5.4); fundo 1170 × 2532 (retrato iPhone) + versão 2048² tileável quando aplicável; ícone 1024² (sem alfa, cantos quadrados — o iOS arredonda); tela 18+ 1170 × 2532.
 
 ### 3.1 Comando Orbital
 - **Face "?":** interrogação construída com segmentos de HUD chanfrados em ciano, dentro de um retículo de mira circular girando (anim. opcional em 2 frames); pequeno ruído de "sinal desconhecido". Nenhum texto.
@@ -205,13 +260,13 @@ Tamanhos: face "?" 1024² (alfa); textura de face do dado 512² por face no atla
 - **Ícone:** dado toon branco com contorno preto e um pip rosa em estrela, fundo amarelo.
 - **Tela 18+:** painel de mangá (quadro com sarjeta branca) com speed lines e um balão vazio (o texto vem do HTML); nada de personagens.
 
-**Regra do ícone e das telas públicas:** ícone, splash e 18+ **nunca** mostram figuras humanas. Só o dado e elementos do tema.
+**Regra do ícone e das telas públicas (conforme o Portão 18+ do `PLANO.md`):** ícone, splash e tela 18+ **nunca** mostram personagens, nem em silhueta. Só o dado e elementos do tema. Nenhuma arte com personagens é carregada antes da confirmação "Tenho 18 anos ou mais — Entrar"; os textos e botões do portão (pt-BR + legenda em inglês) vêm do HTML, não da arte.
 
 ---
 
 ## 4. Fichas das 69 posições
 
-Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição mais larga que alta. Todas as figuras seguem §1 (personagens adultas fictícias com rosto, cobertas/lisas, mesma altura). O contato sempre é descrito em áreas neutras.
+Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição mais larga que alta. Todas as figuras seguem §1 (personagens adultas fictícias, mesma escala). **Figura A/B, Contato e Silhueta-chave** fixam a geometria (vale para pictograma e cartão). **Cobertura** diz o que cobre o quê (sempre com a folga de §1.3.2; tronco/braço/perna do parceiro contam como camada). **Clima** define luz e expressão da ilustração do cartão; o nível visual segue a intensidade (§1.3.5). A `POSE_DESCRIPTION` entra no `{POSE_DESCRIPTION}` do template do tema, junto com o `{INTENSITY_MOOD}` da intensidade.
 
 ### 01 · Missionário — `missionario`
 - **Original:** Missionary · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -219,9 +274,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** acima de A, de frente para baixo, tronco paralelo a A (~10° de inclinação), apoiada em braços retos verticais; pernas estendidas para trás, joelhos apoiados.
 - **Contato/relação:** mãos de A nos ombros de B; troncos alinhados, cabeças no mesmo lado, separadas por 0,5 H.
 - **Cena:** cama (retângulo baixo).
+- **Cobertura:** lençol cobre os dois da cintura para baixo; tronco de B cobre o colo de A; ombros e costas de B à mostra.
+- **Clima:** luz de abajur quente vinda da cabeceira; olhos nos olhos, sorriso cúmplice de A, testa quase tocando.
 - **Silhueta-chave:** dois traços paralelos empilhados com "colunas" dos braços de B — forma de "=" com pilares.
-- **POSE_DESCRIPTION:** `Figure A lies flat on its back; Figure B is positioned above, facing down and parallel, supported on straight vertical arms, heads on the same side.`
-- **Cartão:** O clássico cara a cara, com olho no olho e sem pressa.
+- **POSE_DESCRIPTION:** `Figure A reclines on its back on rumpled sheets, gazing up; Figure B hovers above, facing down and parallel on straight arms, bare shoulders lit warmly, a sheet draped over both from the waist down as their eyes lock.`
+- **Cartão:** O clássico que nunca sai de moda: olho no olho e nenhuma pressa de acabar.
 
 ### 02 · Borboleta — `borboleta`
 - **Original:** Butterfly · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal
@@ -229,9 +286,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé no chão, tronco vertical, de frente para a borda da cama; braços à frente, mãos segurando as canelas/tornozelos de A.
 - **Contato/relação:** mãos de B nas canelas de A; pernas de A sobem ao lado do tronco de B como "asas".
 - **Cena:** cama com borda em canto vivo; linha de chão.
+- **Cobertura:** lençol preso sob A sobe em diagonal e cobre o quadril de A; B de camisa aberta ou lingerie, tronco de B cobre o centro da cena.
+- **Clima:** contraluz da janela atrás de B; A com braços acima da cabeça, olhar convidativo; B concentrado, mãos firmes.
 - **Silhueta-chave:** "L" deitado (A) encostado num "I" (B), com pernas de A em V.
-- **POSE_DESCRIPTION:** `Figure A lies on its back with hips at the bed edge and legs raised nearly vertical; Figure B stands on the floor facing the bed edge, holding Figure A's lower legs.`
-- **Cartão:** Na beirada da cama, com as pernas no alto como asas.
+- **POSE_DESCRIPTION:** `Figure A lies back at the bed edge, arms stretched overhead, legs raised nearly vertical like wings, a sheet draped across its hips; Figure B stands facing the edge in an open shirt, holding Figure A's calves with a steady, admiring gaze.`
+- **Cartão:** Pernas pro alto e asas abertas: deixa quem está de pé comandar o voo.
 
 ### 03 · Lótus — `lotus`
 - **Original:** Padmasana · **Intensidade:** 2 · **Enquadramento:** lateral, compacta
@@ -239,9 +298,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada sobre o colo de B, de frente para B, tronco vertical; pernas passando pela cintura de B e cruzadas atrás dela; braços sobre os ombros de B.
 - **Contato/relação:** abraço completo — braços nos ombros e costas; testas quase se tocando (gap 0,3 H).
 - **Cena:** almofada baixa sob B.
+- **Cobertura:** xale/lençol envolve a cintura dos dois como um único volume; costas nuas de A à mostra, cabelo solto caindo.
+- **Clima:** luz dourada lateral; testas coladas, olhos semicerrados, respiração sincronizada.
 - **Silhueta-chave:** triângulo/pirâmide compacta de duas colunas unidas — forma de flor fechada.
-- **POSE_DESCRIPTION:** `Figure B sits cross-legged with an upright torso; Figure A sits on Figure B's lap facing it, legs wrapped around Figure B's waist, arms around each other's shoulders.`
-- **Cartão:** Sentados e enlaçados, bem de perto, no ritmo da respiração.
+- **POSE_DESCRIPTION:** `Figure B sits cross-legged, upright; Figure A sits in its lap facing it, legs wrapped around Figure B's waist, arms around its neck, a shawl wound around both hips, foreheads touching with eyes half-closed.`
+- **Cartão:** Enlaçados, colados e respirando no mesmo ritmo — sem pressa nenhuma.
 
 ### 04 · Colher — `colher`
 - **Original:** Spoon · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -249,9 +310,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada de lado atrás de A, mesma direção e mesma curvatura, encaixada como segunda "colher".
 - **Contato/relação:** braço de B passa pela cintura de A; tronco de B contra as costas de A; cabeças alinhadas, B 0,3 H acima.
 - **Cena:** cama; travesseiro sob as cabeças.
+- **Cobertura:** lençol cobre os dois do peito de A até os joelhos; ombros e braços à mostra; corpo de B cobre as costas de A.
+- **Clima:** luz de manhã preguiçosa; B beija o ombro de A, que sorri de olhos fechados.
 - **Silhueta-chave:** duas curvas paralelas em "(( " — colheres empilhadas.
-- **POSE_DESCRIPTION:** `Both figures lie on their sides facing the same direction, knees gently bent; Figure B curls behind Figure A with one arm around Figure A's waist.`
-- **Cartão:** Aconchego de conchinha, lento e sem esforço.
+- **POSE_DESCRIPTION:** `Both figures lie on their sides facing the same way, knees gently bent, under one sheet pulled up to Figure A's chest; Figure B curls behind, arm around Figure A's waist, lips near its shoulder.`
+- **Cartão:** Conchinha com segundas intenções: começa carinho, termina onde vocês quiserem.
 
 ### 05 · Amazona — `amazona`
 - **Original:** Cowgirl · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal-compacta
@@ -259,9 +322,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada ereta sobre a região do quadril de B, de frente para a cabeça de B; joelhos dobrados apoiados na cama dos dois lados; mãos no peito/ombros de B.
 - **Contato/relação:** mãos de A nos ombros de B; mãos de B na cintura de A.
 - **Cena:** cama.
+- **Cobertura:** lençol escorrega pelas costas de A e se acumula no quadril dos dois; costas nuas de A à mostra; B coberto do peito para baixo.
+- **Clima:** contraluz quente atrás de A; A olha para baixo com sorriso de quem manda; B olha para cima encantado.
 - **Silhueta-chave:** "T invertido" — linha horizontal (B) com coluna vertical (A).
-- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A sits upright astride Figure B's hips, facing Figure B's head, knees resting on the bed, hands on Figure B's shoulders.`
-- **Cartão:** Quem está por cima dita o ritmo.
+- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A sits upright astride its hips, a sheet slipping down its bare back and pooling around both their hips, hands on Figure B's chest, exchanging a confident, playful look.`
+- **Cartão:** Quem está por cima dita o ritmo — e a vista é por sua conta.
 
 ### 06 · Amazona invertida — `amazona-invertida`
 - **Original:** Reverse cowgirl · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal-compacta
@@ -269,9 +334,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada ereta sobre o quadril de B, **de costas** para a cabeça de B (voltada para os pés); tronco inclinado ~15° à frente; mãos apoiadas nos joelhos de B.
 - **Contato/relação:** mãos de A nos joelhos de B; mãos de B na cintura de A.
 - **Cena:** cama.
+- **Cobertura:** lençol ou lingerie de A cobre o quadril; costas nuas de A viradas para B, lençol na altura da lombar; B coberto até o peito.
+- **Clima:** luz lateral quente; A olha por cima do ombro para B com sorriso travesso.
 - **Silhueta-chave:** "T invertido" com a coluna inclinada para a direita (lado oposto à cabeça de B).
-- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A sits upright astride Figure B's hips facing toward Figure B's feet, leaning slightly forward with hands on Figure B's knees.`
-- **Cartão:** A amazona, só que de costas — nova vista, novo ângulo.
+- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A sits upright on its hips facing Figure B's feet, a sheet gathered at the small of its back, glancing mischievously over its shoulder with hands on Figure B's knees.`
+- **Cartão:** Mesma montaria, vista nova: um olhar por cima do ombro vale mais que mil palavras.
 
 ### 07 · De quatro — `de-quatro`
 - **Original:** Doggy · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -279,9 +346,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada atrás de A, tronco vertical ou 10° à frente, mãos na cintura de A.
 - **Contato/relação:** mãos de B na cintura de A; B alinhada ao eixo de A.
 - **Cena:** cama.
+- **Cobertura:** lingerie opaca de A + lençol caindo sobre o quadril de A; tronco de B coberto por camisa aberta; sombra profunda no centro.
+- **Clima:** low key com contraluz desenhando a curva das costas de A; A olha para trás por cima do ombro.
 - **Silhueta-chave:** "mesa" (A, retângulo sobre quatro apoios) seguida de coluna (B).
-- **POSE_DESCRIPTION:** `Figure A is on hands and knees with a horizontal back; Figure B kneels upright directly behind Figure A with hands on Figure A's waist.`
-- **Cartão:** Um clássico de apoio firme nas mãos e nos joelhos.
+- **POSE_DESCRIPTION:** `Figure A is on hands and knees, back gently arched and hair falling forward, a sheet draped over its hips; Figure B kneels upright behind in an open shirt, hands on Figure A's waist, as Figure A glances back over its shoulder.`
+- **Cartão:** Clássico, direto e cheio de atitude — olha pra trás e provoca.
 
 ### 08 · Tesoura — `tesoura`
 - **Original:** Scissors · **Intensidade:** 2 · **Enquadramento:** vista superior (de cima), horizontal
@@ -289,9 +358,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada de lado, espelhada, tronco à direita, pernas vindo da direita e abertas ~40°.
 - **Contato/relação:** pernas cruzadas em X no centro; troncos afastados, cada um apoiado no cotovelo; mãos podem se dar no meio.
 - **Cena:** nenhuma (colchão opcional como retângulo).
+- **Cobertura:** lençol cruzado cobre o centro em X onde as pernas se encontram; troncos apoiados nos cotovelos, colo e ombros à mostra.
+- **Clima:** luz de cima suave; os dois se olham de ponta a ponta com sorriso de desafio.
 - **Silhueta-chave:** "X" central com um corpo em cada ponta — tesoura aberta.
-- **POSE_DESCRIPTION:** `Top view: two figures lie on their sides at opposite ends, torsos apart and propped on elbows, legs interlaced in an X shape at the center.`
-- **Cartão:** Pernas entrelaçadas como uma tesoura, cada um no seu lado.
+- **POSE_DESCRIPTION:** `Top view: two figures lie on their sides at opposite ends, propped on elbows with bare shoulders, legs interlaced in an X beneath a sheet that covers the center, trading teasing smiles across the bed.`
+- **Cartão:** Pernas cruzadas como tesoura, olhares também — quem pisca primeiro?
 
 ### 09 · Carrinho de mão — `carrinho-de-mao`
 - **Original:** Wheelbarrow · **Intensidade:** 3 · **Enquadramento:** lateral, horizontal
@@ -299,9 +370,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé, tronco vertical, segura as pernas de A pela cintura/coxas de A, com os antebraços à frente do quadril.
 - **Contato/relação:** mãos de B nas coxas de A; A forma uma rampa que termina em B.
 - **Cena:** linha de chão.
+- **Cobertura:** lingerie/shorts opacos de A; lençol ou camisa de B amarrada na cintura; sombra forte no centro.
+- **Clima:** alto contraste, fundo escuro; os dois rindo e concentrados, energia atlética.
 - **Silhueta-chave:** rampa diagonal (A) presa a coluna (B) — "carrinho de mão".
-- **POSE_DESCRIPTION:** `Figure A supports itself on straight arms on the floor, body angled upward as a straight diagonal; Figure B stands behind holding Figure A's legs at waist height.`
-- **Cartão:** Desafio de força e equilíbrio — combinem o sinal para parar.
+- **POSE_DESCRIPTION:** `Figure A balances on straight arms on the floor, body a long diagonal, athletic back lit by rim light; Figure B stands behind holding its thighs at waist height, a shirt tied around its waist, both laughing with concentration.`
+- **Cartão:** Força, equilíbrio e muita risada: um desafio para quem gosta de suar a camisa.
 
 ### 10 · Ponte — `ponte`
 - **Original:** Bridge · **Intensidade:** 3 · **Enquadramento:** lateral, horizontal
@@ -309,9 +382,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada sobre o quadril de B (no topo do arco), tronco vertical, joelhos dobrados, pés soltos ou apoiados de leve no chão.
 - **Contato/relação:** mãos de A nos quadris de B ou na própria perna; A equilibrada no ápice.
 - **Cena:** chão ou cama baixa.
+- **Cobertura:** lingerie opaca de B + lençol torcido sobre o quadril dos dois; A de camisa aberta; duas camadas no centro.
+- **Clima:** alto contraste, contraluz forte no arco de B; olhares de desafio e cumplicidade.
 - **Silhueta-chave:** arco "∩" com uma coluna no topo.
-- **POSE_DESCRIPTION:** `Figure B holds a yoga bridge pose, hands and feet on the floor with the torso arched upward; Figure A sits upright on top of the arch at Figure B's hips.`
-- **Cartão:** Para quem curte ioga: uma ponte a dois, com calma e aquecimento.
+- **POSE_DESCRIPTION:** `Figure B holds a yoga bridge, hands and feet planted, torso arched with a rim-lit silhouette; Figure A sits upright at the peak of the arch in an open shirt, a twisted sheet over both hips, exchanging a daring look.`
+- **Cartão:** Ioga nível ardente: uma ponte a dois para quem tem fôlego e aquecimento em dia.
 
 ### 11 · Cadeira — `cadeira`
 - **Original:** Chair · **Intensidade:** 1 · **Enquadramento:** lateral, compacta
@@ -319,9 +394,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada no colo de B, de frente para B; pernas passando ao lado do quadril de B, pés no chão ou apoiados na base; braços nos ombros de B.
 - **Contato/relação:** abraço; mãos de B nas costas de A.
 - **Cena:** cadeira (assento + encosto + pernas), chão.
+- **Cobertura:** camisa de B aberta; robe de A escorregando dos ombros e cobrindo do quadril às coxas; encosto da cadeira cobre as costas de B.
+- **Clima:** abajur quente atrás; A segura o rosto de B nas mãos, quase beijando.
 - **Silhueta-chave:** duas colunas de frente dentro do "h" da cadeira.
-- **POSE_DESCRIPTION:** `Figure B sits on a chair with feet on the floor; Figure A sits on Figure B's lap facing it, arms resting on Figure B's shoulders.`
-- **Cartão:** Uma cadeira firme e um colo aconchegante.
+- **POSE_DESCRIPTION:** `Figure B sits on a chair with feet planted; Figure A sits in its lap facing it, a robe slipping off its shoulders and pooling over both laps, cupping Figure B's face in a near-kiss.`
+- **Cartão:** Uma cadeira, um colo e um beijo prestes a acontecer.
 
 ### 12 · União suspensa — `uniao-suspensa`
 - **Original:** Sthitarata / Suspended congress · **Intensidade:** 3 · **Enquadramento:** lateral, vertical
@@ -329,9 +406,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** suspensa no colo de B, de frente; pernas em volta da cintura de B; braços em volta do pescoço/ombros de B; tronco vertical.
 - **Contato/relação:** B ↔ parede nas costas; A totalmente fora do chão.
 - **Cena:** parede à esquerda; chão.
+- **Cobertura:** lençol enrolado no corpo de A do peito às coxas; tronco de A cobre B; parede à esquerda.
+- **Clima:** contraluz quente na parede; A com a cabeça jogada levemente para trás, sorriso; B olhando para cima, firme.
 - **Silhueta-chave:** coluna dupla vertical colada à parede, com A formando um "nó" na altura do peito de B.
-- **POSE_DESCRIPTION:** `Figure B stands with its back against a wall, holding Figure A off the ground; Figure A faces Figure B with legs wrapped around Figure B's waist and arms around its shoulders.`
-- **Cartão:** No colo e no alto, com a parede de aliada. Exige força.
+- **POSE_DESCRIPTION:** `Figure B stands with its back to a wall, holding Figure A off the ground; Figure A, wrapped in a sheet from chest to thighs, faces it with legs around its waist and arms around its neck, head tipped back with a smile.`
+- **Cartão:** No colo e contra a parede: exige braço forte e deixa o coração acelerado.
 
 ### 13 · Tripé — `tripe`
 - **Original:** Tripadam · **Intensidade:** 2 · **Enquadramento:** lateral, vertical
@@ -339,9 +418,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé, de frente para A, uma mão segurando por baixo o joelho elevado de A; outra mão nas costas de A.
 - **Contato/relação:** troncos próximos; três apoios no chão (duas pernas de B + uma de A) = tripé.
 - **Cena:** linha de chão.
+- **Cobertura:** vestido/camisa longa de A com fenda deixa a perna elevada à mostra; tronco de B cobre o centro; corte no joelho opcional.
+- **Clima:** luz de fim de tarde; olhar intenso de perto, lábios entreabertos.
 - **Silhueta-chave:** duas colunas com um "braço" horizontal (perna de A) — tripé.
-- **POSE_DESCRIPTION:** `Both figures stand facing each other; Figure A balances on one leg with the other knee raised to hip height, supported by Figure B's hand.`
-- **Cartão:** Em pé e de frente, com três pés no chão.
+- **POSE_DESCRIPTION:** `Both figures stand close face to face; Figure A balances on one leg, the other raised to hip height through the slit of a long shirt, supported by Figure B's hand under its knee, lips almost meeting.`
+- **Cartão:** Em pé, colados, com uma perna no ar — o beijo vem de brinde.
 
 ### 14 · Florescer — `florescer`
 - **Original:** Utphallaka / Blossoming · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal
@@ -349,9 +430,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, sentada sobre os calcanhares, tronco vertical; mãos na cintura de A.
 - **Contato/relação:** quadril de A sobre as coxas de B; pernas de A ao lado do tronco de B.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril elevado de A e as coxas de B; colo de A com lingerie opaca.
+- **Clima:** luz baixa; A de olhos fechados e sorriso entregue; B olha para A com admiração.
 - **Silhueta-chave:** rampa ascendente (A) terminando em coluna ajoelhada (B) — "botão abrindo".
-- **POSE_DESCRIPTION:** `Figure A lies on its back with head on the bed and hips raised, resting on the thighs of Figure B, who kneels upright holding Figure A's waist.`
-- **Cartão:** O quadril no alto, apoiado no colo — como uma flor abrindo.
+- **POSE_DESCRIPTION:** `Figure A lies back, head on the pillow and hips raised onto kneeling Figure B's thighs, a sheet draped over both hips; Figure B holds its waist and gazes down admiringly as Figure A smiles with closed eyes.`
+- **Cartão:** Quadril nas alturas e entrega total — como uma flor se abrindo.
 
 ### 15 · Caixa — `caixa`
 - **Original:** Samputa / Box · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -359,9 +442,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada sobre A, de frente para baixo, corpo reto e alinhado, pernas estendidas unidas por fora das de A; antebraços apoiados.
 - **Contato/relação:** corpos paralelos e colados em toda a extensão; mãos entrelaçadas ao lado.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre os dois do peito para baixo, formando um único volume retangular; ombros e braços à mostra.
+- **Clima:** luz suave de abajur; dedos entrelaçados ao lado, beijo leve.
 - **Silhueta-chave:** retângulo fechado de duas camadas — "caixa".
-- **POSE_DESCRIPTION:** `Figure A lies straight on its back with legs together; Figure B lies aligned on top, facing down, legs straight, forming a compact closed rectangle.`
-- **Cartão:** Corpos alinhados e fechadinhos, como uma caixa.
+- **POSE_DESCRIPTION:** `Figure A lies straight on its back with legs together; Figure B lies aligned on top, a single sheet covering both from the chest down, fingers interlaced at their sides in a slow kiss.`
+- **Cartão:** Tudo alinhado, tudo encaixado — fechadinho como um presente.
 
 ### 16 · Leite e água — `leite-e-agua`
 - **Original:** Kshiraniraka · **Intensidade:** 1 · **Enquadramento:** lateral, compacta
@@ -369,9 +454,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada no colo de B, **de costas** para B, recostada no peito de B; pés no chão; cabeça ao lado do ombro de B.
 - **Contato/relação:** braços de B envolvendo a cintura de A; costas de A no peito de B.
 - **Cena:** borda de cama.
+- **Cobertura:** lençol/robe cobre o colo de ambos; costas de A no peito de B; braços de B cruzados na cintura de A.
+- **Clima:** luz dourada; B beija o pescoço de A, que inclina a cabeça de olhos fechados.
 - **Silhueta-chave:** duas colunas sobrepostas voltadas para o mesmo lado, uma "dentro" da outra.
-- **POSE_DESCRIPTION:** `Figure B sits upright; Figure A sits on Figure B's lap facing away, leaning back against Figure B's chest, with Figure B's arms around Figure A's waist.`
-- **Cartão:** Um abraço por trás em que os dois se misturam.
+- **POSE_DESCRIPTION:** `Figure B sits upright; Figure A sits in its lap facing away, leaning back against its chest, a robe draped over both laps, head tilted as Figure B kisses its neck.`
+- **Cartão:** Abraço por trás, beijo no pescoço — impossível dizer onde um termina e o outro começa.
 
 ### 17 · Cavalo de balanço — `cavalo-de-balanco`
 - **Original:** Rocking horse · **Intensidade:** 2 · **Enquadramento:** lateral, compacta
@@ -379,9 +466,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada no colo de B, de frente, joelhos apoiados dos dois lados; mãos nos ombros de B.
 - **Contato/relação:** A inclinada para B; seta curva de balanço ↔ (opcional).
 - **Cena:** cama.
+- **Cobertura:** lençol sobre o colo de B e o quadril de A; costas nuas de A à mostra.
+- **Clima:** luz quente lateral; os dois rindo, A inclinado para B.
 - **Silhueta-chave:** "V" aberto (B reclinada + A ereta) sobre base curva — cavalinho de balanço.
-- **POSE_DESCRIPTION:** `Figure B sits cross-legged, leaning back on straight arms; Figure A sits on Figure B's lap facing it, hands on Figure B's shoulders, with a gentle rocking motion.`
-- **Cartão:** Balancinho para frente e para trás, sem pressa.
+- **POSE_DESCRIPTION:** `Figure B sits cross-legged, leaning back on straight arms; Figure A sits in its lap facing it, hands on its shoulders, a sheet draped over their hips, rocking gently with a shared laugh.`
+- **Cartão:** Balancinho pra frente e pra trás, sem pressa — e com muita graça.
 
 ### 18 · Arado — `arado`
 - **Original:** Plough · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal
@@ -389,9 +478,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé no chão, atrás da borda, segurando as pernas de A na altura das coxas.
 - **Contato/relação:** mãos de B nas coxas de A; pernas de A passam ao lado da cintura de B.
 - **Cena:** cama com borda viva; chão.
+- **Cobertura:** lingerie opaca de A + lençol preso sob o quadril; tronco de B cobre o centro; sombra na borda.
+- **Clima:** low key; A com o rosto de lado sobre os braços, sorriso malicioso para trás.
 - **Silhueta-chave:** linha horizontal (A) conectada a coluna (B) com leve "cabo" subindo — arado.
-- **POSE_DESCRIPTION:** `Figure A lies face down on the bed with hips at the edge and legs extended off the bed; Figure B stands on the floor holding Figure A's legs at thigh height.`
-- **Cartão:** De bruços na beirada, com as pernas nas mãos de quem está de pé.
+- **POSE_DESCRIPTION:** `Figure A lies face down on the bed with hips at the edge and legs extended off it, a sheet draped over its hips, cheek on its folded arms with a sly smile back; Figure B stands on the floor holding its thighs.`
+- **Cartão:** De bruços na beirada, entregue às mãos de quem está de pé.
 
 ### 19 · Cachoeira — `cachoeira`
 - **Original:** Waterfall · **Intensidade:** 3 · **Enquadramento:** lateral, horizontal
@@ -399,9 +490,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada ereta sobre o quadril de B, de frente para B, joelhos na cama.
 - **Contato/relação:** mãos de A na cintura de B; mãos de B apoiadas no chão para segurança.
 - **Cena:** cama com borda viva; chão.
+- **Cobertura:** lençol cobre o quadril dos dois e escorre pela borda da cama; A de camisa aberta; B com lingerie opaca.
+- **Clima:** alto contraste, cabelo de B caindo em direção ao chão, lençol em cascata; B sorri de olhos fechados.
 - **Silhueta-chave:** "cascata" — linha horizontal que despenca em diagonal pela borda, com coluna no topo.
-- **POSE_DESCRIPTION:** `Figure B lies on its back with the upper torso and head extending off the bed edge, sloping down toward the floor; Figure A sits upright astride Figure B's hips on the bed.`
-- **Cartão:** Metade na cama, metade para fora — vá devagar e com apoio.
+- **POSE_DESCRIPTION:** `Figure B lies back with its upper torso and head extending off the bed edge, hair cascading toward the floor, hands on the floor; Figure A sits upright astride its hips on the bed, a sheet spilling over both and down the edge like a waterfall.`
+- **Cartão:** Metade na cama, metade no ar: vertigem boa, com apoio e calma.
 
 ### 20 · Sapo — `sapo`
 - **Original:** Frog · **Intensidade:** 2 · **Enquadramento:** lateral, compacta
@@ -409,9 +502,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** agachada sobre o quadril de B, de frente, apoiada nas solas dos pés; joelhos bem dobrados (~45°) e abertos; mãos no peito/ombros de B.
 - **Contato/relação:** mãos de A nos ombros de B; pés de A na cama ao lado da cintura de B.
 - **Cena:** cama.
+- **Cobertura:** lingerie de A + lençol sobre o quadril de B; joelhos de A e corpo de A cobrem o centro.
+- **Clima:** luz quente de baixo; A com sorriso de desafio; B mãos na cintura de A.
 - **Silhueta-chave:** "Z" compacto agachado sobre linha — sapo pronto para saltar.
-- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A squats above Figure B's hips on the soles of its feet, facing Figure B, knees deeply bent, hands on Figure B's shoulders.`
-- **Cartão:** Agachadinho por cima, com impulso nas pernas.
+- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A crouches above its hips on the soles of its feet, knees bent wide, hands on Figure B's shoulders, a sheet over Figure B's hips, flashing a daring grin.`
+- **Cartão:** Agachadinho por cima, com impulso nas pernas — pronto pra pular de alegria.
 
 ### 21 · Águia — `aguia`
 - **Original:** Garuda / Eagle · **Intensidade:** 1 · **Enquadramento:** frontal-alto (3/4 de cima), horizontal
@@ -419,9 +514,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada entre as pernas de A, tronco ereto, mãos nos joelhos de A.
 - **Contato/relação:** mãos de B nos joelhos de A.
 - **Cena:** cama.
+- **Cobertura:** lençol drapeado sobre o quadril de A e entre os dois; B de camisa aberta, tronco cobrindo o centro.
+- **Clima:** vista alta, luz suave; A com braços acima da cabeça e olhar convidativo.
 - **Silhueta-chave:** "águia de asas abertas" — A em forma de X largo, B como coluna central.
-- **POSE_DESCRIPTION:** `Three-quarter top view: Figure A lies on its back with legs spread wide to the sides like wings; Figure B kneels upright between them, hands on Figure A's knees.`
-- **Cartão:** Asas abertas e quem está de joelhos no centro.
+- **POSE_DESCRIPTION:** `Three-quarter top view: Figure A lies back with arms overhead and legs spread wide like wings, a sheet draped across its hips; Figure B kneels upright between them in an open shirt, hands on its knees, returning an inviting gaze.`
+- **Cartão:** Asas abertas e um convite no olhar.
 
 ### 22 · Bambu partido — `bambu-partido`
 - **Original:** Venuvidarita / Splitting bamboo · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal
@@ -429,9 +526,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, tronco ereto, segurando a perna elevada de A junto ao ombro.
 - **Contato/relação:** tornozelo de A no ombro de B; setas curtas de alternância entre as pernas (opcional).
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril de A; perna elevada à mostra; tronco de B cobre o centro.
+- **Clima:** luz lateral quente; B beija o tornozelo de A no ombro; A ri.
 - **Silhueta-chave:** "Y" deitado com um ramo vertical — bambu se abrindo.
-- **POSE_DESCRIPTION:** `Figure A lies on its back with one leg extended flat and the other raised straight onto the shoulder of kneeling Figure B; the legs alternate.`
-- **Cartão:** Uma perna no ombro, a outra estendida — e troquem de vez em quando.
+- **POSE_DESCRIPTION:** `Figure A lies on its back, one leg stretched flat and the other raised straight onto kneeling Figure B's shoulder, a sheet across its hips; Figure B kisses the ankle on its shoulder, and they trade legs.`
+- **Cartão:** Uma perna no ombro, beijo no tornozelo — e depois troca.
 
 ### 23 · Prego — `prego`
 - **Original:** Shulachitaka / Fixing a nail · **Intensidade:** 3 · **Enquadramento:** lateral, horizontal
@@ -439,9 +538,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, tronco ereto ou levemente inclinado para frente, mão segurando o tornozelo de A.
 - **Contato/relação:** pé de A no ombro de B (ponto de contato claramente visível).
 - **Cena:** cama.
+- **Cobertura:** lençol sobre o quadril de A; B coberto da cintura para baixo; perna dobrada de A no primeiro plano.
+- **Clima:** contraluz forte; olhar de desafio de A, B sorrindo.
 - **Silhueta-chave:** perna dobrada como um "prego/martelo" em ângulo entre A e B.
-- **POSE_DESCRIPTION:** `Figure A lies on its back with one leg straight and the other bent, foot resting on the shoulder of Figure B, who kneels upright holding that ankle.`
-- **Cartão:** Flexibilidade em jogo: um pé no ombro e muita confiança.
+- **POSE_DESCRIPTION:** `Figure A lies on its back, one leg straight and the other bent with the foot resting on kneeling Figure B's shoulder, a sheet across its hips; Figure B holds that ankle, meeting Figure A's daring look.`
+- **Cartão:** Flexibilidade e confiança: um pé no ombro e um olhar que desafia.
 
 ### 24 · Caranguejo — `caranguejo`
 - **Original:** Karkata / Crab · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal-compacta
@@ -449,8 +550,10 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** acima de A, inclinada para frente, apoiada nos braços retos ao lado dos ombros de A; joelhos na cama.
 - **Contato/relação:** canelas de A encostadas no tronco de B; cabeças do mesmo lado.
 - **Cena:** cama.
+- **Cobertura:** joelhos de A e o lençol cobrem o tronco e o quadril; ombros de B à mostra.
+- **Clima:** luz baixa; rostos muito próximos, lábios entreabertos.
 - **Silhueta-chave:** "bola" compacta (A encolhida) sob um arco (B).
-- **POSE_DESCRIPTION:** `Figure A lies on its back with knees drawn tightly to its chest; Figure B leans over it, supported on straight arms beside Figure A's shoulders.`
+- **POSE_DESCRIPTION:** `Figure A lies back with knees drawn tight to its chest, a sheet wrapped around them; Figure B leans in above on straight arms, bare-shouldered, faces close with parted lips.`
 - **Cartão:** Joelhos no peito e alguém bem pertinho por cima.
 
 ### 25 · Abraço de Indrani — `abraco-de-indrani`
@@ -459,9 +562,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, tronco ereto, mãos nas canelas de A.
 - **Contato/relação:** mãos de B nas canelas de A.
 - **Cena:** cama.
+- **Cobertura:** lençol preso entre as pernas dobradas de A, cobrindo o quadril; B coberto da cintura para baixo.
+- **Clima:** luz dourada; A segura os joelhos e sorri; B olha com intensidade.
 - **Silhueta-chave:** "W" deitado (joelhos abertos junto ao tronco) diante de coluna ajoelhada.
-- **POSE_DESCRIPTION:** `Figure A lies on its back with knees bent wide and drawn up beside its torso, holding them; Figure B kneels upright, hands on Figure A's shins.`
-- **Cartão:** Uma pose clássica de flexibilidade; alongar antes ajuda.
+- **POSE_DESCRIPTION:** `Figure A lies on its back with knees bent wide and drawn up beside its torso, a sheet covering its hips; Figure B kneels upright with hands on its shins, holding an intense gaze.`
+- **Cartão:** Uma pose clássica de flexibilidade — alongar antes vira preliminar.
 
 ### 26 · Bocejo — `bocejo`
 - **Original:** Vijrimbhitaka / Yawning · **Intensidade:** 2 · **Enquadramento:** lateral ou 3/4, horizontal
@@ -469,9 +574,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, tronco ereto, mãos nos tornozelos ou panturrilhas de A.
 - **Contato/relação:** mãos de B nas panturrilhas de A; B no vértice do V.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril de A no vértice do V; tronco de B ereto cobre o centro.
+- **Clima:** low key com contraluz nas pernas de A; A com olhos semicerrados.
 - **Silhueta-chave:** "V" grande apontando para cima — boca bocejando.
-- **POSE_DESCRIPTION:** `Figure A lies on its back with both legs raised and spread in a wide V; Figure B kneels upright at the vertex, holding Figure A's calves.`
-- **Cartão:** Pernas em V bem abertas, como um grande bocejo.
+- **POSE_DESCRIPTION:** `Figure A lies back with both legs raised in a wide V, a sheet covering its hips at the vertex; Figure B kneels upright holding its calves, rim light tracing Figure A's long legs.`
+- **Cartão:** Pernas em V, bem abertas, como um bocejo cheio de preguiça boa.
 
 ### 27 · Pressão — `pressao`
 - **Original:** Piditaka / Pressing · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal-compacta
@@ -479,9 +586,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, tronco ereto, braços envolvendo as pernas unidas de A.
 - **Contato/relação:** canelas/pés de A no peito de B; abraço de B nas pernas de A.
 - **Cena:** cama.
+- **Cobertura:** pernas unidas de A cobrem o tronco dos dois; lençol no quadril.
+- **Clima:** luz quente; B beija o joelho de A; A sorri de olhos fechados.
 - **Silhueta-chave:** "Z" fechado — pernas unidas como alavanca entre A e B.
-- **POSE_DESCRIPTION:** `Figure A lies on its back with legs together and bent, feet pressing against the chest of Figure B, who kneels upright hugging Figure A's legs.`
-- **Cartão:** Pernas juntas e um abraço bem apertadinho.
+- **POSE_DESCRIPTION:** `Figure A lies on its back with legs together and bent, feet pressed against the chest of kneeling Figure B, a sheet across its hips; Figure B hugs Figure A's legs and kisses its knee.`
+- **Cartão:** Pernas juntinhas, abraço apertado e beijo no joelho.
 
 ### 28 · Tenaz — `tenaz`
 - **Original:** Samdamsha / Tongs · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal-compacta
@@ -489,9 +598,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada sobre o quadril de B, de frente, joelhos dobrados e fechados firmemente contra a cintura de B (coxas "apertando").
 - **Contato/relação:** coxas de A nas laterais da cintura de B; mãos de A no peito/ombros de B.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril dos dois; coxas de A fecham a lateral; costas de A à mostra.
+- **Clima:** luz lateral; A com sorriso firme, mãos no peito de B.
 - **Silhueta-chave:** "Λ" invertido (joelhos de A fechados) sobre linha — pinça/tenaz.
-- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A sits upright astride Figure B's hips, knees drawn in tightly against Figure B's waist like tongs.`
-- **Cartão:** Quem está por cima segura firme, como uma pinça.
+- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A sits upright astride its hips, knees hugging Figure B's waist, a sheet pooled around both hips, hands on Figure B's chest with a knowing smile.`
+- **Cartão:** Quem está por cima segura firme — e não solta tão cedo.
 
 ### 29 · Pião — `piao`
 - **Original:** Bhramara / Top · **Intensidade:** 3 · **Enquadramento:** vista superior, compacta
@@ -499,9 +610,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada sobre o quadril de B, tronco ereto, girada ~45° em relação a B (mostra rotação).
 - **Contato/relação:** mãos de A apoiadas na cama; **seta circular de 270°** em volta de A (cor de acento).
 - **Cena:** nenhuma ou colchão.
+- **Cobertura:** lençol enrolado no quadril de A girando junto; B coberto até o peito.
+- **Clima:** vista de cima, lençol em espiral acompanhando o giro; os dois rindo.
 - **Silhueta-chave:** cruz "+" girada com arco circular — pião rodando.
-- **POSE_DESCRIPTION:** `Top view: Figure B lies on its back; Figure A sits astride Figure B's hips, slowly rotating its body in a circle, shown with a circular arrow.`
-- **Cartão:** Um giro lento e cuidadoso — o desafio é coordenar.
+- **POSE_DESCRIPTION:** `Top view: Figure B lies on its back; Figure A sits astride its hips, turning slowly in a circle, a sheet swirling around both hips in a spiral, both laughing.`
+- **Cartão:** Um giro lento e caprichado — o desafio é não perder o ritmo (nem o riso).
 
 ### 30 · Balanço — `balanco`
 - **Original:** Prenkholita / Swing · **Intensidade:** 3 · **Enquadramento:** lateral, horizontal
@@ -509,9 +622,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada sobre o quadril de B, **de costas** para a cabeça de B, mãos apoiadas nos joelhos de B.
 - **Contato/relação:** A sobre o ponto alto do arco; seta curva de balanço (opcional).
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril dos dois; costas de A com lingerie ou lençol na lombar.
+- **Clima:** alto contraste; A olha para trás por cima do ombro; B sorri de olhos fechados.
 - **Silhueta-chave:** meia-ponte "⌒" com coluna voltada para os pés — balanço.
-- **POSE_DESCRIPTION:** `Figure B lies on its back lifting its hips into a low bridge; Figure A sits on Figure B's hips facing Figure B's feet, hands on Figure B's knees, swinging gently.`
-- **Cartão:** Um balanço a dois; quem está embaixo dá o impulso.
+- **POSE_DESCRIPTION:** `Figure B lies back lifting its hips into a low bridge; Figure A sits on its hips facing its feet, a sheet across the small of its back and both hips, glancing back over its shoulder as they sway.`
+- **Cartão:** Um balanço a dois — quem está embaixo dá o impulso.
 
 ### 31 · Elefante — `elefante`
 - **Original:** Elephant · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -519,9 +634,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada sobre as costas de A, de frente para baixo, alinhada, apoiada nos antebraços.
 - **Contato/relação:** tronco de B sobre as costas de A; antebraços de B ao lado dos ombros de A.
 - **Cena:** cama; travesseiro.
+- **Cobertura:** lençol cobre os dois do meio das costas até as coxas; ombros e braços à mostra.
+- **Clima:** luz de abajur; B beija a nuca de A, que sorri de olhos fechados.
 - **Silhueta-chave:** duas linhas planas empilhadas, B com leve "tromba" (antebraços) à frente.
-- **POSE_DESCRIPTION:** `Figure A lies flat face down with legs straight and together; Figure B lies aligned on Figure A's back, supported on its forearms.`
-- **Cartão:** Deitados um sobre o outro, relaxado e bem juntinho.
+- **POSE_DESCRIPTION:** `Figure A lies flat face down with legs together; Figure B lies aligned on its back, propped on forearms, a sheet covering both from mid-back to thighs, lips at Figure A's nape.`
+- **Cartão:** Deitados um sobre o outro, relaxado, pesado e gostoso.
 
 ### 32 · Vaca — `vaca`
 - **Original:** Dhenuka / Congress of a cow · **Intensidade:** 3 · **Enquadramento:** lateral, horizontal
@@ -529,9 +646,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé atrás de A, tronco ereto, mãos na cintura de A.
 - **Contato/relação:** mãos de B na cintura de A.
 - **Cena:** chão; banco baixo opcional sob as mãos de A.
+- **Cobertura:** lingerie opaca de A + lençol/camisa de B amarrada no quadril; corte do quadro nos joelhos opcional.
+- **Clima:** alto contraste; A olha para trás entre os braços, sorriso travesso.
 - **Silhueta-chave:** "Π" (A em mesa de pé) seguido de coluna — forma de quadrúpede.
-- **POSE_DESCRIPTION:** `Figure A stands and bends forward at the hips with hands on the floor or a low support; Figure B stands upright behind Figure A, hands on its waist.`
-- **Cartão:** De pé e dobrado para frente — alongamento em dupla.
+- **POSE_DESCRIPTION:** `Figure A stands and folds forward at the hips, hands on a low bench, hair falling down, wearing opaque lingerie; Figure B stands behind, a shirt tied around its hips, hands on Figure A's waist as it peeks back playfully.`
+- **Cartão:** Alongamento a dois, de pé, com muito equilíbrio e um olhar pra trás.
 
 ### 33 · Alinhamento — `alinhamento`
 - **Original:** CAT / Coital alignment technique · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -539,9 +658,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** sobre A, corpo reto e colado, deslocada ~0,5 H para cima (em direção à cabeça de A) em relação ao Missionário; apoiada nos antebraços.
 - **Contato/relação:** corpos colados; seta dupla curta ↕ ao longo do eixo (balanço).
 - **Cena:** cama.
+- **Cobertura:** lençol cobre os dois do peito para baixo; ombros à mostra.
+- **Clima:** luz suave; testa com testa, sorriso cúmplice, braços de A envolvendo B.
 - **Silhueta-chave:** duas linhas paralelas desalinhadas (B mais à frente) com seta de balanço.
-- **POSE_DESCRIPTION:** `Figure A lies on its back; Figure B lies closely on top, shifted slightly upward toward Figure A's head, supported on forearms, with a gentle rocking arrow.`
-- **Cartão:** Uma variação do clássico em que o segredo é o balanço.
+- **POSE_DESCRIPTION:** `Figure A lies on its back with arms around Figure B, who lies close on top shifted slightly upward on its forearms, a sheet covering both from the chest down, foreheads together in a slow rocking rhythm.`
+- **Cartão:** O clássico com um segredinho: tudo está no balanço.
 
 ### 34 · Nirvana — `nirvana`
 - **Original:** Nirvana · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -549,9 +670,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada sobre A, de frente para baixo, pernas por fora das de A, apoiada nos antebraços.
 - **Contato/relação:** mãos de A na cabeceira; corpos paralelos.
 - **Cena:** cama com cabeceira (retângulo vertical à esquerda).
+- **Cobertura:** lençol cobre os dois da cintura para baixo; braços de A estendidos à mostra.
+- **Clima:** luz de vela na cabeceira; A de olhos fechados, entregue; B beija seu pescoço.
 - **Silhueta-chave:** linha longa com braços esticados até a cabeceira — "corpo alongado".
-- **POSE_DESCRIPTION:** `Figure A lies on its back, legs together, arms stretched overhead gripping the headboard; Figure B lies on top facing down, supported on forearms.`
-- **Cartão:** Braços para trás, segurando a cabeceira, e entrega total.
+- **POSE_DESCRIPTION:** `Figure A lies on its back, legs together, arms stretched overhead gripping the headboard; Figure B lies on top on its forearms, a sheet covering both from the waist down, kissing Figure A's neck.`
+- **Cartão:** Braços pra trás, mãos na cabeceira e entrega total.
 
 ### 35 · Ave do paraíso — `ave-do-paraiso`
 - **Original:** Bird of paradise · **Intensidade:** 3 · **Enquadramento:** lateral, vertical
@@ -559,9 +682,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé, de frente para A, segurando o tornozelo de A no próprio ombro; outra mão nas costas de A.
 - **Contato/relação:** tornozelo de A no ombro de B; troncos próximos.
 - **Cena:** chão; parede opcional atrás de A para apoio.
+- **Cobertura:** vestido/camisa longa com fenda em A; tronco de B cobre o centro; corte do quadro na cintura opcional.
+- **Clima:** contraluz forte; olhar fixo e sorriso de bailarina orgulhosa.
 - **Silhueta-chave:** duas colunas com uma perna em diagonal alta — crista de ave.
-- **POSE_DESCRIPTION:** `Both figures stand facing each other; Figure A balances on one leg with the other raised high and resting on Figure B's shoulder, supported by Figure B's hand.`
-- **Cartão:** Equilíbrio de bailarina: uma perna no ombro e a outra firme no chão.
+- **POSE_DESCRIPTION:** `Both figures stand face to face; Figure A balances on one leg, the other raised high onto Figure B's shoulder through a long slit shirt, Figure B's hand at its back, their gazes locked.`
+- **Cartão:** Equilíbrio de bailarina: uma perna no ombro, outra firme no chão, olhar fixo.
 
 ### 36 · Mesa — `mesa`
 - **Original:** Table / Edge of table · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -569,9 +694,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé no chão, de frente para a borda da mesa, tronco ereto, mãos na cintura de A.
 - **Contato/relação:** mãos de B na cintura de A; mãos de A segurando a borda da mesa.
 - **Cena:** mesa (tampo + 2 pernas); chão.
+- **Cobertura:** toalha de mesa/lençol sob e sobre o quadril de A, caindo pela borda; B de camisa aberta, tronco cobre o centro.
+- **Clima:** luz de pendente sobre a mesa; A apoiado nos cotovelos, sorriso de convite.
 - **Silhueta-chave:** linha sobre tampo, encontrando coluna na borda — "T deitado".
-- **POSE_DESCRIPTION:** `Figure A lies on its back on a table with hips at the edge; Figure B stands on the floor facing the table edge, hands on Figure A's waist.`
-- **Cartão:** Na beirada da mesa, na altura certa.
+- **POSE_DESCRIPTION:** `Figure A lies back on a table with hips at the edge, propped on its elbows, a tablecloth draped over its hips and spilling off the edge; Figure B stands facing it in an open shirt, hands on its waist.`
+- **Cartão:** Esquece o jantar: a mesa agora tem outro uso.
 
 ### 37 · Pernas no ombro — `pernas-no-ombro`
 - **Original:** Deep impact · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal
@@ -579,9 +706,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, tronco ereto ou inclinado ~15° à frente, mãos nas coxas de A.
 - **Contato/relação:** tornozelos de A sobre os ombros de B.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril de A; pernas de A e tronco de B cobrem o centro.
+- **Clima:** low key; B beija a panturrilha de A; A com olhar semicerrado.
 - **Silhueta-chave:** "L" deitado cuja perna vertical encosta na coluna — ângulo reto apoiado.
-- **POSE_DESCRIPTION:** `Figure A lies on its back with both legs raised straight and resting on the shoulders of Figure B, who kneels upright holding Figure A's thighs.`
-- **Cartão:** As duas pernas nos ombros de quem está de joelhos.
+- **POSE_DESCRIPTION:** `Figure A lies on its back with both legs raised straight onto kneeling Figure B's shoulders, a sheet across its hips; Figure B holds its thighs and kisses a calf under warm rim light.`
+- **Cartão:** As duas pernas nos ombros de quem está de joelhos — intenso na medida.
 
 ### 38 · Escada — `escada`
 - **Original:** Stairs · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal-diagonal
@@ -589,9 +718,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada ou de pé atrás de A, um degrau abaixo, mãos na cintura de A.
 - **Contato/relação:** mãos de B na cintura de A; ambas seguem a diagonal da escada.
 - **Cena:** escada de 4–5 degraus em diagonal ascendente.
+- **Cobertura:** camisa longa de A cobre o quadril; B de camisa aberta; corpo de B cobre o centro; degraus em primeiro plano.
+- **Clima:** luz de corredor vinda de cima; A olha para trás na escada, sorriso.
 - **Silhueta-chave:** duas figuras em diagonal paralela à escada — "subindo".
-- **POSE_DESCRIPTION:** `On a staircase, Figure A kneels on a step leaning forward with hands on higher steps; Figure B is behind it one step lower, hands on Figure A's waist.`
-- **Cartão:** Subindo a escada, um degrau de cada vez.
+- **POSE_DESCRIPTION:** `On a staircase, Figure A kneels on a step leaning forward, hands on the steps above, a long shirt covering its hips; Figure B kneels one step below, hands on its waist, as Figure A glances back with a smile.`
+- **Cartão:** Nem chegaram no quarto — a escada resolveu antes.
 
 ### 39 · Estrela — `estrela`
 - **Original:** Star · **Intensidade:** 2 · **Enquadramento:** vista superior, compacta
@@ -599,9 +730,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada de lado, perpendicular a A, pernas passando por baixo/entre as de A; braço de apoio sob a cabeça.
 - **Contato/relação:** pernas cruzadas no centro; membros irradiando em várias direções.
 - **Cena:** colchão.
+- **Cobertura:** lençol cobre o centro onde as pernas se cruzam; torsos e braços à mostra.
+- **Clima:** vista de cima, luz suave; os dois de mãos dadas acima das cabeças, rindo.
 - **Silhueta-chave:** estrela de 5–6 pontas formada por braços e pernas irradiando do centro.
-- **POSE_DESCRIPTION:** `Top view: Figure A lies on its back with one knee bent; Figure B lies on its side perpendicular to it, legs crossing at the center so the limbs radiate like a star.`
-- **Cartão:** Braços e pernas espalhados como uma estrela.
+- **POSE_DESCRIPTION:** `Top view: Figure A lies on its back with one knee bent; Figure B lies on its side perpendicular to it, legs crossing at the center under a sheet, limbs radiating like a star, fingertips touching above their heads.`
+- **Cartão:** Braços e pernas espalhados como uma estrela — e vocês dois no centro.
 
 ### 40 · Sereia — `sereia`
 - **Original:** Mermaid · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal
@@ -609,9 +742,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé no chão, de frente para a borda, segurando as pernas unidas de A junto ao próprio tronco.
 - **Contato/relação:** braços de B abraçando as pernas unidas de A.
 - **Cena:** cama; almofada sob o quadril de A; chão.
+- **Cobertura:** pernas unidas de A cobrem o tronco dela; lençol no quadril; almofada sob o quadril.
+- **Clima:** luz quente; B abraça as pernas de A e sorri; A estica os braços acima da cabeça.
 - **Silhueta-chave:** "L" com as pernas unidas em uma só forma vertical — cauda de sereia.
-- **POSE_DESCRIPTION:** `Figure A lies on its back at the bed edge, hips raised on a cushion, legs held together and raised straight up; Figure B stands on the floor holding Figure A's joined legs.`
-- **Cartão:** Pernas juntinhas para cima, como uma cauda de sereia.
+- **POSE_DESCRIPTION:** `Figure A lies back at the bed edge, hips on a cushion, legs held together and raised straight like a tail, a sheet across its hips; Figure B stands on the floor hugging Figure A's joined legs with a smile.`
+- **Cartão:** Pernas juntinhas para cima, cauda de sereia — e alguém para abraçá-la.
 
 ### 41 · Tartaruga — `tartaruga`
 - **Original:** Tortoise · **Intensidade:** 2 · **Enquadramento:** lateral, compacta
@@ -619,9 +754,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, tronco ereto ou levemente inclinado para frente, mãos nos joelhos de A.
 - **Contato/relação:** solas de A no peito de B; mãos de B nos joelhos de A.
 - **Cena:** cama.
+- **Cobertura:** joelhos encolhidos de A cobrem o tronco; lençol no quadril; B de camisa aberta.
+- **Clima:** luz quente; A ri com os pés no peito de B; B segura seus joelhos.
 - **Silhueta-chave:** "casco" arredondado (A encolhida) encostado numa coluna.
-- **POSE_DESCRIPTION:** `Figure A lies on its back with knees tucked to its chest and feet resting on the chest of Figure B, who kneels upright with hands on Figure A's knees.`
-- **Cartão:** Encolhidinho feito tartaruga, com os pés no peito do par.
+- **POSE_DESCRIPTION:** `Figure A lies back with knees tucked to its chest and feet resting on kneeling Figure B's chest, a sheet over its hips; Figure B holds its knees, both laughing.`
+- **Cartão:** Encolhidinho feito tartaruga, com os pés no peito do par — fofo e perigoso.
 
 ### 42 · Trono — `trono`
 - **Original:** Throne · **Intensidade:** 1 · **Enquadramento:** lateral, compacta-vertical
@@ -629,9 +766,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada no colo de B, de costas para B, pés no chão, tronco ereto; mãos nos joelhos de B.
 - **Contato/relação:** mãos de B na cintura de A.
 - **Cena:** borda da cama; chão.
+- **Cobertura:** robe/camisa longa de A cobre o colo; lençol sobre as coxas de B; costas de A no peito de B.
+- **Clima:** luz dourada; B beija o ombro de A; A olha para o espectador (carta de 'piscadela' opcional).
 - **Silhueta-chave:** duas colunas sentadas, uma à frente da outra, voltadas para o mesmo lado — trono.
-- **POSE_DESCRIPTION:** `Figure B sits on the edge of a bed with feet on the floor; Figure A sits on Figure B's lap facing away, feet on the floor, hands on Figure B's knees.`
-- **Cartão:** Sentado na beirada, com um trono de colo.
+- **POSE_DESCRIPTION:** `Figure B sits on the bed edge with feet on the floor; Figure A sits in its lap facing away, a robe slipping off its shoulders and covering both laps, hands on Figure B's knees as Figure B kisses its shoulder.`
+- **Cartão:** Sentado na beirada, com um trono de colo e um beijo no ombro.
 
 ### 43 · Aranha — `aranha`
 - **Original:** Spider · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal
@@ -639,9 +778,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** espelhada: sentada, inclinada para trás nas mãos, pernas entrelaçadas com as de A.
 - **Contato/relação:** pernas entrelaçadas no centro; troncos afastados.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o centro onde as pernas se entrelaçam; troncos inclinados à mostra com lingerie/camisa.
+- **Clima:** luz lateral; os dois se olham de longe, sorriso de desafio.
 - **Silhueta-chave:** "W" simétrico com muitos membros apoiados — aranha.
-- **POSE_DESCRIPTION:** `Both figures sit facing each other, leaning back on straight arms with hands behind them, legs interlaced at the center.`
-- **Cartão:** Cada um apoiado nas mãos, pernas entrelaçadas no meio.
+- **POSE_DESCRIPTION:** `Both figures sit facing each other, leaning back on straight arms, legs interlaced at the center beneath a sheet, shoulders bare, trading challenging smiles across the gap.`
+- **Cartão:** Cada um apoiado nas mãos, pernas enroscadas — quem aguenta mais tempo?
 
 ### 44 · Cobra — `cobra`
 - **Original:** Cobra · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -649,9 +790,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada sobre as costas de A, alinhada, também com o tronco levemente erguido nos antebraços.
 - **Contato/relação:** antebraços de B ao lado dos de A; cabeças próximas.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre os dois do meio das costas às coxas; costas de A parcialmente à mostra.
+- **Clima:** luz de vela baixa; A ergue o rosto e B beija sua bochecha.
 - **Silhueta-chave:** linha baixa que se ergue na frente — cobra levantando a cabeça.
-- **POSE_DESCRIPTION:** `Figure A lies face down with its torso raised on its elbows like a yoga sphinx pose; Figure B lies aligned on Figure A's back, also propped on forearms.`
-- **Cartão:** Postura da esfinge, a dois, deitadinhos.
+- **POSE_DESCRIPTION:** `Figure A lies face down with its torso raised on its elbows like a sphinx; Figure B lies aligned on its back, also on its forearms, a sheet covering both from mid-back to thighs, kissing Figure A's cheek.`
+- **Cartão:** Postura da esfinge a dois — deitadinhos e cheios de charme.
 
 ### 45 · Pretzel — `pretzel`
 - **Original:** Pretzel · **Intensidade:** 2 · **Enquadramento:** 3/4 superior, compacta
@@ -659,9 +802,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, montando a perna de baixo de A (uma perna de cada lado), mão segurando o joelho dobrado de A.
 - **Contato/relação:** mão de B no joelho de A; pernas das duas cruzadas em nó.
 - **Cena:** cama.
+- **Cobertura:** lençol torcido cobre o quadril dos dois em nó; tronco de B cobre o centro.
+- **Clima:** luz quente; A de lado, olhando para B por cima do ombro, rindo.
 - **Silhueta-chave:** laço torcido de membros — pretzel.
-- **POSE_DESCRIPTION:** `Figure A lies on its side with the top leg bent forward; Figure B kneels straddling Figure A's lower leg, holding Figure A's bent knee, forming a twisted knot shape.`
-- **Cartão:** Um nó de pernas, bem torcidinho.
+- **POSE_DESCRIPTION:** `Figure A lies on its side with its top leg bent forward; Figure B kneels straddling Figure A's lower leg, holding the bent knee, a twisted sheet knotted around both hips as Figure A laughs over its shoulder.`
+- **Cartão:** Um nó de pernas bem torcidinho — desatar é metade da diversão.
 
 ### 46 · Arco — `arco`
 - **Original:** Bow · **Intensidade:** 3 · **Enquadramento:** lateral, horizontal
@@ -669,9 +814,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada de lado atrás de A, mesma direção, segurando os pés/tornozelos de A.
 - **Contato/relação:** mãos de B nos tornozelos de A; A forma a curva do arco, B a "corda".
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril dos dois; corpo de B atrás cobre A; contraluz no arco.
+- **Clima:** alto contraste, silhueta de arco desenhada pela luz; A de cabeça para trás, sorriso.
 - **Silhueta-chave:** "C" invertido (A) fechado por linha reta (B) — arco e corda.
-- **POSE_DESCRIPTION:** `Both figures lie on their sides, Figure B behind; Figure A arches its back with knees bent so its feet reach backward, and Figure B holds Figure A's ankles like a bowstring.`
-- **Cartão:** Corpo em arco e alguém segurando a corda. Alongue antes!
+- **POSE_DESCRIPTION:** `Both figures lie on their sides, Figure B behind; Figure A arches back with knees bent so its feet reach backward, Figure B holding its ankles like a bowstring, a sheet over both hips, rim light tracing the arc.`
+- **Cartão:** Corpo em arco e alguém segurando a corda — alongue antes de soltar a flecha.
 
 ### 47 · Gangorra — `gangorra`
 - **Original:** Seesaw · **Intensidade:** 2 · **Enquadramento:** lateral, compacta
@@ -679,9 +826,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada no colo de B, de frente, pernas passando ao lado do tronco de B; mãos nos ombros de B.
 - **Contato/relação:** abraço; **seta curva dupla** mostrando inclinação para frente e para trás.
 - **Cena:** cama ou chão.
+- **Cobertura:** lençol envolve os dois do quadril às coxas; costas de A à mostra.
+- **Clima:** luz quente; testas coladas, balanço, sorriso.
 - **Silhueta-chave:** "V" que oscila — gangorra.
-- **POSE_DESCRIPTION:** `Figure B sits with legs extended; Figure A sits on Figure B's lap facing it, and together they rock forward and backward like a seesaw, shown by a curved double arrow.`
-- **Cartão:** Um vai e vem de gangorra, cara a cara.
+- **POSE_DESCRIPTION:** `Figure B sits with legs extended; Figure A sits in its lap facing it, a sheet wrapped around both hips, foreheads touching as they rock forward and back like a seesaw.`
+- **Cartão:** Vai e vem de gangorra, cara a cara e bem juntinhos.
 
 ### 48 · Cavalgada lateral — `cavalgada-lateral`
 - **Original:** Side saddle · **Intensidade:** 2 · **Enquadramento:** 3/4 frontal, compacta
@@ -689,9 +838,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada sobre o quadril de B **de lado** (perpendicular a B), pernas juntas pendendo para um lado da cintura de B; uma mão apoiada no peito de B, outra na cama.
 - **Contato/relação:** mão de A no peito/ombro de B.
 - **Cena:** cama.
+- **Cobertura:** pernas unidas de A para o lado + lençol no quadril dos dois; B coberto até o peito.
+- **Clima:** luz lateral; A apoiado numa mão, olhar de lado, sorriso elegante.
 - **Silhueta-chave:** "+" — coluna sentada de lado cruzando a linha deitada; pernas de A num único bloco lateral.
-- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A sits sideways across Figure B's hips, both legs together to one side, one hand on Figure B's chest.`
-- **Cartão:** Montaria de lado, como numa sela de amazona.
+- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A sits sideways across its hips, both legs together to one side like riding side-saddle, a sheet over their hips, one hand on Figure B's chest and a sidelong glance.`
+- **Cartão:** Montaria de lado, com toda a elegância de uma amazona.
 
 ### 49 · Colher em pé — `colher-em-pe`
 - **Original:** Standing spoon · **Intensidade:** 2 · **Enquadramento:** lateral, vertical
@@ -699,9 +850,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé atrás de A, mesma direção, braços em volta da cintura de A.
 - **Contato/relação:** tronco de B próximo às costas de A; cabeças alinhadas.
 - **Cena:** parede à direita (à frente de A); chão.
+- **Cobertura:** lingerie/camisa longa de A; corpo de B atrás cobre A; corte na altura das coxas opcional.
+- **Clima:** luz de janela; B beija o pescoço de A; A inclina a cabeça, olhos fechados.
 - **Silhueta-chave:** duas colunas paralelas encaixadas — colher de pé.
-- **POSE_DESCRIPTION:** `Both figures stand facing the same direction, Figure B behind Figure A with arms around its waist; Figure A leans slightly forward with hands on a wall.`
-- **Cartão:** A conchinha, só que de pé.
+- **POSE_DESCRIPTION:** `Both figures stand facing the same way, Figure B close behind Figure A with arms around its waist; Figure A leans lightly forward with palms on a wall, wearing a long open shirt, tilting its head for a kiss on the neck.`
+- **Cartão:** A conchinha, só que de pé — e com a parede como cúmplice.
 
 ### 50 · Parede — `parede`
 - **Original:** Standing wall · **Intensidade:** 2 · **Enquadramento:** lateral, vertical
@@ -709,9 +862,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé, de frente para A, mãos na parede ao lado dos ombros de A ou na cintura de A.
 - **Contato/relação:** A entre a parede e B; troncos próximos.
 - **Cena:** parede à esquerda; chão.
+- **Cobertura:** roupas abertas mas no lugar; tronco de B cobre A; corte na cintura opcional.
+- **Clima:** luz de corredor; rostos muito próximos, beijo prestes a acontecer.
 - **Silhueta-chave:** coluna colada à faixa da parede + coluna de frente — "||".
-- **POSE_DESCRIPTION:** `Figure A stands with its back against a wall; Figure B stands facing it, hands on the wall beside Figure A's shoulders.`
-- **Cartão:** Encostados na parede, de frente e sem cerimônia.
+- **POSE_DESCRIPTION:** `Figure A stands with its back against a wall, hands on Figure B's shoulders; Figure B stands facing it, palms on the wall beside Figure A's head, shirts half-open, lips a breath apart.`
+- **Cartão:** Encostados na parede, de frente — o beijo não espera o quarto.
 
 ### 51 · Escorregador — `escorregador`
 - **Original:** Slide · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -719,8 +874,10 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada sobre as costas de A, alinhada, apoiada nos antebraços.
 - **Contato/relação:** B acompanha a leve rampa criada pela almofada.
 - **Cena:** cama; almofada elíptica sob A.
+- **Cobertura:** lençol cobre os dois das costas às coxas; almofada sob o quadril de A.
+- **Clima:** luz baixa; B beija a nuca de A; A sorri com o rosto no travesseiro.
 - **Silhueta-chave:** linha com uma pequena "lombada" — escorregador.
-- **POSE_DESCRIPTION:** `Figure A lies face down with a cushion under its hips creating a gentle slope; Figure B lies aligned on Figure A's back, supported on forearms.`
+- **POSE_DESCRIPTION:** `Figure A lies face down with a cushion under its hips; Figure B lies aligned on its back on its forearms, a sheet covering both from the back to the thighs, kissing Figure A's nape.`
 - **Cartão:** Uma almofada estratégica e tudo desliza melhor.
 
 ### 52 · Rede — `rede`
@@ -729,9 +886,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** deitada de costas à frente de B, tronco reclinado para trás na cama, pernas elevadas com as panturrilhas sobre os ombros de B.
 - **Contato/relação:** pernas de A nos ombros de B; A "suspensa" como numa rede.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril de A e o colo de B; pernas de A nos ombros de B.
+- **Clima:** luz dourada; A relaxado com braços abertos, sorrindo; B segura as coxas de A.
 - **Silhueta-chave:** curva côncava (A) pendurada em um pilar (B) — rede.
-- **POSE_DESCRIPTION:** `Figure B sits cross-legged and upright; Figure A lies back in front of it with legs raised and resting over Figure B's shoulders, body curving like a hammock.`
-- **Cartão:** Recoste e relaxe, como numa rede.
+- **POSE_DESCRIPTION:** `Figure B sits cross-legged and upright; Figure A reclines in front of it, arms spread and relaxed, legs resting over Figure B's shoulders, a sheet draped over both hips like a hammock.`
+- **Cartão:** Deita, relaxa e se balança — como numa rede.
 
 ### 53 · Cruz — `cruz`
 - **Original:** T-square / Cross · **Intensidade:** 2 · **Enquadramento:** vista superior, compacta
@@ -739,9 +898,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada de lado, perpendicular a A, tronco formando a barra do T; pernas passando sob os joelhos de A.
 - **Contato/relação:** pernas de A sobre o quadril de B; os eixos dos corpos a 90°.
 - **Cena:** colchão.
+- **Cobertura:** lençol cobre o cruzamento dos corpos; torsos à mostra com lingerie/lençol no peito de A.
+- **Clima:** vista de cima, luz suave; B apoiado no cotovelo olha A; A sorri.
 - **Silhueta-chave:** "T" nítido (dois eixos perpendiculares).
-- **POSE_DESCRIPTION:** `Top view: Figure A lies on its back with knees bent up; Figure B lies on its side perpendicular to Figure A, the two bodies forming a clear T shape.`
-- **Cartão:** Corpos em T, cruzados em ângulo reto.
+- **POSE_DESCRIPTION:** `Top view: Figure A lies on its back with knees bent up; Figure B lies on its side perpendicular to it, propped on an elbow, a sheet covering where their bodies cross, forming a clear T as they share a smile.`
+- **Cartão:** Corpos em T, cruzados em ângulo reto — geometria nunca foi tão interessante.
 
 ### 54 · Tesoura aberta — `tesoura-aberta`
 - **Original:** Open scissors · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal-compacta
@@ -749,9 +910,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada, montando a perna de baixo de A, mão segurando a perna elevada de A pela panturrilha.
 - **Contato/relação:** mão de B na panturrilha de A; perna de A passa ao lado do ombro de B.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril de A; tronco de B cobre o centro; perna elevada de A à mostra.
+- **Clima:** contraluz na perna elevada; A olha para B de lado, sorriso malicioso.
 - **Silhueta-chave:** "V" lateral aberto (pernas de A) com coluna no vértice — tesoura aberta.
-- **POSE_DESCRIPTION:** `Figure A lies on its side with its top leg raised high; Figure B kneels upright straddling Figure A's lower leg and supports the raised leg at the calf.`
-- **Cartão:** De lado, com uma perna para o alto, como uma tesoura aberta.
+- **POSE_DESCRIPTION:** `Figure A lies on its side with its top leg raised high, a sheet across its hips; Figure B kneels straddling Figure A's lower leg and supports the raised leg at the calf, rim light along the leg.`
+- **Cartão:** De lado, com uma perna para o alto — tesoura aberta e olhar afiado.
 
 ### 55 · Ferro de passar — `ferro-de-passar`
 - **Original:** Flatiron / Prone bone · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -759,9 +922,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada sobre as costas de A, pernas por fora das de A, apoiada nas mãos com braços semiestendidos.
 - **Contato/relação:** B paralela e ligeiramente elevada acima de A.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre os dois das costas às coxas; ombros e braços à mostra.
+- **Clima:** low key; B próximo ao ouvido de A, sussurrando; A sorri.
 - **Silhueta-chave:** "cunha" baixa e plana — ferro de passar.
-- **POSE_DESCRIPTION:** `Figure A lies face down with legs together and hips slightly raised; Figure B lies above and aligned with it, supported on its hands.`
-- **Cartão:** Deitado de bruços, bem rente e bem junto.
+- **POSE_DESCRIPTION:** `Figure A lies face down, legs together, hips slightly raised; Figure B lies above and aligned on its hands, a sheet covering both from the back to the thighs, whispering in Figure A's ear.`
+- **Cartão:** Deitado de bruços, bem rente, com um sussurro no ouvido.
 
 ### 56 · Braço do sofá — `braco-do-sofa`
 - **Original:** Sofa arm · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal
@@ -769,9 +934,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé no chão atrás do braço do sofá, tronco ereto, mãos na cintura de A.
 - **Contato/relação:** mãos de B na cintura de A.
 - **Cena:** sofá (assento + braço arredondado); chão.
+- **Cobertura:** lingerie opaca de A + manta do sofá sobre o quadril; tronco de B cobre o centro.
+- **Clima:** luz de abajur na sala; A com o rosto nas almofadas, sorriso travesso para trás.
 - **Silhueta-chave:** corpo de A dobrado sobre um "∩" (o braço) + coluna.
-- **POSE_DESCRIPTION:** `Figure A lies face down draped over a sofa armrest, hips on the arm and torso resting on the seat; Figure B stands on the floor behind, hands on Figure A's waist.`
-- **Cartão:** O braço do sofá vira o melhor apoio da casa.
+- **POSE_DESCRIPTION:** `Figure A lies draped face down over a sofa armrest, torso resting on the seat, a throw blanket over its hips, peeking back with a mischievous smile; Figure B stands behind with hands on its waist.`
+- **Cartão:** O braço do sofá vira o melhor apoio da casa. Netflix pode esperar.
 
 ### 57 · Onda — `onda`
 - **Original:** Wave · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -779,9 +946,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** deitada sobre B, de frente para baixo, corpos colados, com leve ondulação no tronco (curva em S suave).
 - **Contato/relação:** mãos entrelaçadas acima das cabeças; **seta ondulada** (~) ao longo do eixo.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre os dois do meio das costas de A para baixo; costas de A à mostra.
+- **Clima:** luz em ondas (sombra de cortina); mãos entrelaçadas acima das cabeças, beijo.
 - **Silhueta-chave:** duas linhas coladas com ondulação — onda.
-- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A lies fully on top facing down, bodies close together, with a gentle wave-like rolling motion shown by a wavy arrow.`
-- **Cartão:** Movimento de onda, corpo inteiro, bem devagar.
+- **POSE_DESCRIPTION:** `Figure B lies on its back; Figure A lies fully on top facing down, bodies close, fingers laced above their heads in a kiss, a sheet covering both from mid-back down, their bodies rolling in a slow wave.`
+- **Cartão:** Movimento de onda, corpo inteiro, bem devagar — deixa a maré levar.
 
 ### 58 · Sessenta e nove — `sessenta-e-nove`
 - **Original:** 69 · **Intensidade:** 2 · **Enquadramento:** vista superior, horizontal
@@ -789,9 +958,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada de lado de frente para A, **em sentido oposto** (cabeça à direita), joelhos levemente dobrados.
 - **Contato/relação:** corpos lado a lado em sentidos invertidos; cada figura com a mão no joelho da outra. Nada de detalhe na região central — resolver só pela forma.
 - **Cena:** colchão.
+- **Cobertura:** lençol único cobre os dois dos ombros aos joelhos; só cabeças, braços e pés aparecem; o centro é uma massa contínua de tecido.
+- **Clima:** vista de cima, luz suave; cada um olha para o outro de ponta-cabeça, sorriso cúmplice.
 - **Silhueta-chave:** as duas curvas de cabeça-e-corpo em sentidos opostos desenhando o número "69" (estilize as cabeças como os "olhos" do 6 e do 9).
-- **POSE_DESCRIPTION:** `Top view: two figures lie side by side on their sides in opposite head-to-toe directions, their curved bodies forming the shape of the number 69.`
-- **Cartão:** O número já diz tudo: cada um num sentido.
+- **POSE_DESCRIPTION:** `Top view: two figures lie side by side in opposite head-to-toe directions under a single tangled sheet that covers them from shoulders to knees, their curled outlines forming the number 69, trading upside-down smiles.`
+- **Cartão:** O número já diz tudo: cada um num sentido, os dois no mesmo clima.
 
 ### 59 · Ninho — `ninho`
 - **Original:** Nest · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal-compacta
@@ -799,9 +970,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada entre os pés de A, tronco ereto ou levemente à frente, mãos nos joelhos de A.
 - **Contato/relação:** mãos de B nos joelhos de A.
 - **Cena:** cama; travesseiro.
+- **Cobertura:** lençol sobre o quadril de A e entre os joelhos; B coberto da cintura para baixo.
+- **Clima:** luz quente e suave; olhar terno, B acaricia os joelhos de A.
 - **Silhueta-chave:** "Λ" dos joelhos de A formando um ninho diante da coluna B.
-- **POSE_DESCRIPTION:** `Figure A lies on its back with knees bent and feet flat on the bed; Figure B kneels upright at Figure A's feet, hands resting on Figure A's knees.`
-- **Cartão:** Confortável como um ninho: simples e carinhoso.
+- **POSE_DESCRIPTION:** `Figure A lies back with knees bent and feet flat on the bed, a sheet draped over its hips; Figure B kneels at its feet with hands resting on its knees, sharing a tender, lingering look.`
+- **Cartão:** Confortável como um ninho: simples, carinhoso e cheio de promessa.
 
 ### 60 · Carruagem — `carruagem`
 - **Original:** Chariot · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal-compacta
@@ -809,9 +982,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada no colo de B, de costas para B, tronco inclinado para frente (~40°), mãos apoiadas nas canelas de B ou na cama.
 - **Contato/relação:** mãos de B na cintura de A; A "conduz" à frente.
 - **Cena:** cama ou chão.
+- **Cobertura:** lençol cobre o colo de B e o quadril de A; costas de A à mostra até a lombar.
+- **Clima:** luz lateral quente; A olha para frente, B beija suas costas.
 - **Silhueta-chave:** "ʎ" — coluna ereta com diagonal à frente, como condutor e carruagem.
-- **POSE_DESCRIPTION:** `Figure B sits with legs extended; Figure A sits on Figure B's lap facing away, leaning forward with hands on Figure B's shins.`
-- **Cartão:** Quem está na frente conduz a carruagem.
+- **POSE_DESCRIPTION:** `Figure B sits with legs extended; Figure A sits in its lap facing away, leaning forward with hands on Figure B's shins, a sheet pooled over both laps as Figure B kisses its back.`
+- **Cartão:** Quem está na frente conduz a carruagem; quem está atrás só aproveita a paisagem.
 
 ### 61 · Gaivota — `gaivota`
 - **Original:** Seagull · **Intensidade:** 2 · **Enquadramento:** frontal/3-4, horizontal
@@ -819,8 +994,10 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé no chão, de frente para a borda, mãos na cintura de A.
 - **Contato/relação:** mãos de B na cintura de A; pernas de A formam as "asas".
 - **Cena:** cama com borda; chão.
+- **Cobertura:** lençol preso sob A cobre o quadril em diagonal; tronco de B cobre o centro.
+- **Clima:** luz de janela; A segura os tornozelos e ri; B de camisa aberta.
 - **Silhueta-chave:** "V" aberto em forma de asas de gaivota sobre a borda da cama.
-- **POSE_DESCRIPTION:** `Figure A lies on its back at the bed edge with legs raised in a wide V, holding its own ankles; Figure B stands on the floor facing the bed edge, hands on Figure A's waist.`
+- **POSE_DESCRIPTION:** `Figure A lies back at the bed edge with legs raised in a wide V, holding its own ankles, a sheet across its hips; Figure B stands on the floor in an open shirt, hands on its waist, both grinning.`
 - **Cartão:** Pernas abertas como asas de gaivota, na beira da cama.
 
 ### 62 · Parafuso — `parafuso`
@@ -829,9 +1006,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** de pé no chão, de frente para a borda, uma mão no quadril de A, outra nos joelhos unidos.
 - **Contato/relação:** mãos de B no quadril e joelhos de A.
 - **Cena:** cama com borda; chão.
+- **Cobertura:** lençol enrolado no quadril de A; joelhos unidos cobrem a frente; B de camisa aberta.
+- **Clima:** luz lateral; A de lado olha para B com sorriso tímido-malicioso.
 - **Silhueta-chave:** "espiral" de A (tronco torcido + joelhos juntos) diante de coluna.
-- **POSE_DESCRIPTION:** `Figure A lies on its side at the bed edge, torso slightly twisted, knees bent together toward its chest; Figure B stands on the floor facing the edge, hands on Figure A's hip and knees.`
-- **Cartão:** Uma torcidinha de lado, na beirada da cama.
+- **POSE_DESCRIPTION:** `Figure A lies on its side at the bed edge, torso slightly twisted, knees bent together toward its chest, a sheet wound around its hips; Figure B stands facing the edge with hands on its hip and knees.`
+- **Cartão:** Uma torcidinha de lado na beirada da cama — parafuso bem apertado.
 
 ### 63 · Nó do amor — `no-do-amor`
 - **Original:** Love knot · **Intensidade:** 1 · **Enquadramento:** lateral, compacta
@@ -839,9 +1018,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** sentada de frente, espelhada, pernas envolvendo A; braços nas costas de A.
 - **Contato/relação:** abraço total; braços e pernas entrelaçados; testas próximas.
 - **Cena:** cama.
+- **Cobertura:** lençol envolve os dois do quadril às coxas; corpos cobrem um ao outro no abraço.
+- **Clima:** luz dourada; beijo profundo, olhos fechados, mãos no cabelo.
 - **Silhueta-chave:** massa única arredondada com membros cruzados — nó.
-- **POSE_DESCRIPTION:** `Both figures sit facing each other in a close embrace, arms around each other's shoulders and legs wrapped around each other's waists, forming a compact knot.`
-- **Cartão:** Um abraço daqueles, com braços e pernas no mesmo nó.
+- **POSE_DESCRIPTION:** `Both figures sit face to face in a tight embrace, legs wrapped around each other's waists and fingers in each other's hair, a sheet wound around their hips, lost in a deep kiss.`
+- **Cartão:** Um abraço daqueles, com braços, pernas e beijo no mesmo nó.
 
 ### 64 · Dragão — `dragao`
 - **Original:** Dragon · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -849,9 +1030,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada sobre as costas de A, alinhada; braços estendidos por cima dos de A, mãos entrelaçadas às de A.
 - **Contato/relação:** mãos entrelaçadas bem à frente (ponto de destaque do pictograma).
 - **Cena:** cama.
+- **Cobertura:** lençol cobre os dois do meio das costas às coxas; braços estendidos à mostra.
+- **Clima:** luz baixa; mãos entrelaçadas à frente, B com o rosto colado ao de A.
 - **Silhueta-chave:** linha longa e baixa com "cabeça" projetada à frente (braços unidos) — dragão.
-- **POSE_DESCRIPTION:** `Figure A lies face down with arms stretched forward; Figure B lies aligned on Figure A's back, arms stretched over Figure A's, hands interlaced in front.`
-- **Cartão:** Deitados, alongados e de mãos dadas lá na frente.
+- **POSE_DESCRIPTION:** `Figure A lies face down with arms stretched forward; Figure B lies aligned on its back, arms over Figure A's with fingers interlaced ahead, cheek to cheek, a sheet covering both from mid-back to thighs.`
+- **Cartão:** Deitados, alongados, de mãos dadas lá na frente — um dragão bem manso.
 
 ### 65 · De joelhos — `de-joelhos`
 - **Original:** Kneeling face-to-face · **Intensidade:** 2 · **Enquadramento:** lateral, vertical
@@ -859,9 +1042,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada de frente para A, espelhada, braços em volta da cintura de A.
 - **Contato/relação:** abraço de frente; troncos próximos, joelhos a 0,5 H de distância.
 - **Cena:** cama ou tapete.
+- **Cobertura:** lingerie/camisa aberta + lençol amarrado no quadril; corpos colados cobrem o tronco.
+- **Clima:** luz de vela; beijo, mãos no rosto e no cabelo.
 - **Silhueta-chave:** "Ⅱ" ajoelhado — duas colunas espelhadas unidas no topo.
-- **POSE_DESCRIPTION:** `Both figures kneel upright facing each other on a soft surface, embracing, Figure A's arms around Figure B's shoulders and Figure B's arms around Figure A's waist.`
-- **Cartão:** De joelhos, frente a frente, num abraço firme.
+- **POSE_DESCRIPTION:** `Both figures kneel upright face to face on the bed, bodies pressed close, a sheet gathered around both hips, hands in each other's hair in a lingering kiss.`
+- **Cartão:** De joelhos, frente a frente, num beijo que não tem hora pra acabar.
 
 ### 66 · Ajoelhado por trás — `ajoelhado-por-tras`
 - **Original:** Kneeling from behind · **Intensidade:** 2 · **Enquadramento:** lateral, vertical
@@ -869,9 +1054,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** ajoelhada atrás de A, mesma direção, tronco ereto, braços em volta da cintura de A.
 - **Contato/relação:** braços de B na cintura de A; costas de A junto ao peito de B.
 - **Cena:** cama.
+- **Cobertura:** lençol amarrado no quadril de A; corpo de B atrás cobre as costas de A.
+- **Clima:** contraluz; A inclina a cabeça no ombro de B, olhos fechados; B beija sua têmpora.
 - **Silhueta-chave:** duas colunas ajoelhadas paralelas, uma atrás da outra.
-- **POSE_DESCRIPTION:** `Both figures kneel upright facing the same direction, Figure B directly behind Figure A with arms around Figure A's waist.`
-- **Cartão:** Os dois de joelhos, um abraçando o outro por trás.
+- **POSE_DESCRIPTION:** `Both figures kneel upright facing the same way, Figure B close behind with arms around Figure A's waist, a sheet around their hips, Figure A resting its head back on Figure B's shoulder with eyes closed.`
+- **Cartão:** Os dois de joelhos, um abraçando o outro por trás — bem apertadinho.
 
 ### 67 · Amazona inclinada — `amazona-inclinada`
 - **Original:** Lean back · **Intensidade:** 2 · **Enquadramento:** lateral, horizontal-compacta
@@ -879,9 +1066,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada sobre o quadril de B, de frente, tronco inclinado ~40° para trás, mãos apoiadas na cama ou nos joelhos de B atrás de si.
 - **Contato/relação:** mãos de A nos joelhos de B; mãos de B na cintura de A.
 - **Cena:** cama.
+- **Cobertura:** lençol cobre o quadril dos dois; lingerie/camisa aberta de A.
+- **Clima:** luz quente vinda de trás de A; A inclina para trás, cabelo caindo, sorriso.
 - **Silhueta-chave:** "T invertido" com a coluna tombada para trás — diagonal.
-- **POSE_DESCRIPTION:** `Figure B lies on its back with knees bent; Figure A sits astride Figure B's hips facing it, leaning its torso back with hands resting on Figure B's knees.`
-- **Cartão:** Por cima, mas recostando para trás — vista diferente.
+- **POSE_DESCRIPTION:** `Figure B lies on its back with knees bent; Figure A sits astride its hips and leans back with hands on Figure B's knees, hair falling back, a sheet pooled around both hips.`
+- **Cartão:** Por cima, mas recostando pra trás — aproveita a vista do teto (e do resto).
 
 ### 68 · Colo de costas — `colo-de-costas`
 - **Original:** Seated reverse lap · **Intensidade:** 1 · **Enquadramento:** lateral, compacta
@@ -889,9 +1078,11 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura A:** sentada no colo de B, de costas para B, recostada no peito de B, pernas estendidas por cima das de B.
 - **Contato/relação:** braço livre de B em volta da cintura de A; cabeça de A junto ao ombro de B.
 - **Cena:** chão; almofada atrás de B opcional.
+- **Cobertura:** manta sobre as pernas dos dois; costas de A no peito de B.
+- **Clima:** luz de fim de tarde; B beija a têmpora de A; A de olhos fechados, relaxado.
 - **Silhueta-chave:** duas diagonais paralelas recostadas — "poltrona humana".
-- **POSE_DESCRIPTION:** `Figure B sits on the floor with legs extended, leaning back slightly; Figure A sits on Figure B's lap facing away, reclining against Figure B's chest with legs over Figure B's.`
-- **Cartão:** Um colo de costas para relaxar juntinhos.
+- **POSE_DESCRIPTION:** `Figure B sits on the floor with legs extended, leaning back slightly on one hand; Figure A sits in its lap facing away, reclining against its chest, a blanket over both their legs and hips, eyes closed as Figure B kisses its temple.`
+- **Cartão:** Colo de costas pra relaxar juntinhos — e ver onde isso vai dar.
 
 ### 69 · Entrelaçados — `entrelacados`
 - **Original:** Entwined · **Intensidade:** 1 · **Enquadramento:** lateral, horizontal
@@ -899,68 +1090,82 @@ Convenções: "lateral" = figuras vistas de perfil; "horizontal" = composição 
 - **Figura B:** deitada de lado de frente para A, espelhada, perna de cima sobre A; braço em volta de A.
 - **Contato/relação:** abraço frente a frente; pernas entrelaçadas; cabeças no mesmo travesseiro.
 - **Cena:** cama; travesseiro.
+- **Cobertura:** lençol cobre os dois do peito às coxas; pernas entrelaçadas por baixo.
+- **Clima:** luz de manhã; nariz com nariz, sorriso preguiçoso.
 - **Silhueta-chave:** duas curvas "( )" que se fecham num círculo — entrelaçados.
-- **POSE_DESCRIPTION:** `Both figures lie on their sides facing each other in a close embrace, each with its top leg resting over the other, heads on the same pillow.`
-- **Cartão:** Abraçados de lado, pernas e braços se encontrando.
+- **POSE_DESCRIPTION:** `Both figures lie on their sides facing each other in a close embrace, each with its top leg over the other, heads sharing one pillow, a sheet covering both from chest to thighs, noses touching.`
+- **Cartão:** Abraçados de lado, pernas enroscadas — o jeito mais gostoso de ficar.
 
 ---
 
 ## 5. Checklist de produção e revisão
 
 ### 5.1 Ordem de produção
-1. **Bíblia aprovada** (§1): travar H, grade, espessuras e cores A/B antes de desenhar.
-2. **Kit de manequim vetorial**: símbolos reutilizáveis (cabeça, tronco, braço 2 segmentos, perna 2 segmentos, pé) com pivôs nas articulações; props (cama, cadeira, parede, mesa, almofada, degrau, sofá, chão).
-3. **Pictograma-base vetorial das 69** (SVG, chapado, A/B em cinzas de teste #BBBBBB/#555555). Começar pelas ~24 do catálogo MVP; depois o resto em lotes de 15.
-4. **Revisão de pose** (checklist 5.5) e **teste de 64 px** em lote (folha de contato 8 × 9).
-5. **Tratamento por tema**: aplicar tokens (§2.5) via script sobre o SVG (cores, stroke, chanfro) → Luz de Velas primeiro (tema do MVP), depois Orbital, Miniatura, Kira.
-6. **Refinamento opcional por IA** usando o SVG como controle de pose + template + negativos do tema. Toda saída de IA passa de novo pela revisão 5.5 (a IA costuma "inventar" anatomia e rostos com aparência jovem demais ou de gente real — rejeitar).
-7. **Artes do tema** (§3): face "?", textura das faces, fundo, ícone, 18+.
-8. **Atlas e integração**; teste no aparelho (iPhone, luz baixa e brilho alto).
+1. **Bíblia aprovada** (§1): travar H, grade, espessuras, cores A/B/lençol, paleta de pele e níveis de intensidade visual.
+2. **Elenco por tema:** folha de personagens com 3 ou 4 casais fictícios adultos (frente, perfil e 3/4, rosto neutro e 3 expressões permitidas). Revisar "aparência adulta" e "não parece ninguém real" **antes** de qualquer ficha.
+3. **Kit vetorial:** corpo articulado (cabeça, tronco, braços e pernas em 2 segmentos), **3 formas de lençol** (diagonal, em volta do quadril, cobrindo os dois) e props (cama, cadeira, parede, mesa, almofada, degraus, sofá, chão).
+4. **Pictograma-base das 69** (SVG, A/B/lençol em cinzas de teste #BBBBBB/#555555/#888888). Começar pelas ~24 do catálogo MVP; depois lotes de 15.
+5. **Revisão de pose + teste de 64 px** (folha de contato 8 × 9).
+6. **Tratamento do pictograma por tema** via tokens (§2.5): Luz de Velas primeiro (tema do MVP), depois Orbital, Miniatura e Kira.
+7. **Ilustração do cartão** por tema: pintura ou IA com o SVG como controle de pose, template do tema + `{INTENSITY_MOOD}` + negativos comuns e do tema. **Toda** saída passa pela revisão §5.5; saídas de IA com anatomia inventada, tecido transparente, rosto jovem ou semelhança com alguém real são descartadas, não retocadas.
+8. **Artes do tema** (§3): face "?", textura das faces, fundo, ícone, tela 18+ (sem personagens).
+9. **Atlas e integração**; teste no aparelho (iPhone, brilho alto e luz baixa).
 
 ### 5.2 Formatos de exportação
 | Arquivo | Formato | Uso |
 |---|---|---|
-| Base | `SVG` (viewBox 0 0 1024 1024, sem texto, sem fontes embutidas, IDs `figA`, `figB`, `props`, `motion`) | fonte da verdade; `js/pictograms.js` pode desenhar a partir dele |
-| Tema | `PNG` 1024 × 1024 RGBA (alfa) | mestre raster por tema |
-| Web | `WebP` 512 × 512 com alfa (q 85) + `WebP` 128 × 128 (lista/catálogo) | app |
-| Atlas | `WebP`/`PNG` 1024 × 1024 | textura do dado |
+| Pictograma base | `SVG` (viewBox 0 0 1024 1024, sem texto; IDs `figA`, `figB`, `sheet`, `props`, `motion`) | fonte da verdade da pose |
+| Pictograma do tema | `PNG` 1024² RGBA + `WebP` 256² e 128² com alfa | face do dado, catálogo |
+| Ilustração do cartão | `PNG` 1024² mestre + `WebP` 1024² (q 82) e 512² | cartão de resultado |
+| Atlas | `WebP`/`PNG` 1024² | textura do dado |
 
 ### 5.3 Nomenclatura
-- Base: `arte/base/{id}.svg` (ex.: `arte/base/borboleta.svg`)
-- Tema: `arte/{tema}/{id}.png` e `arte/{tema}/{id}.webp`, com `{tema}` ∈ `orbital`, `velas`, `miniatura`, `kira`
-- Face "?": `arte/{tema}/_interrogacao.png`
-- Textura da face: `arte/{tema}/_face.png`; fundo: `arte/{tema}/_fundo.webp`; 18+: `arte/{tema}/_portao.webp`
-- Ícone: `arte/icone/icon-{tamanho}.png` (1024, 512, 192, 180) — **um só ícone neutro** (recomendo o de Luz de Velas ou uma versão sem tema) para não denunciar nada na tela inicial.
-- `id` = slug da ficha, minúsculas, sem acento, hífens.
+- Pictograma base: `arte/base/{id}.svg`
+- Pictograma do tema: `arte/{tema}/{id}.png` / `.webp`
+- Ilustração do cartão: `arte/{tema}/cartao/{id}.webp`
+- Face "?": `arte/{tema}/_interrogacao.png` · face do dado: `arte/{tema}/_face.png` · fundo: `arte/{tema}/_fundo.webp` · portão: `arte/{tema}/_portao.webp`
+- Elenco: `arte/{tema}/_elenco/casal-{n}.png` (uso interno, não vai para o app)
+- Ícone: `arte/icone/icon-{1024|512|192|180}.png`: **um só ícone neutro**, sem personagens.
+- `{tema}` ∈ `orbital`, `velas`, `miniatura`, `kira`; `id` = slug da ficha (minúsculas, sem acento, hífens).
 
 ### 5.4 Atlas do dado
-- Atlas 1024 × 1024 em **grade 4 × 4 de células 256 × 256** (pictograma em 240 px + 8 px de padding por lado). 16 slots: 6 faces ativas + face "?" + moldura + reservas. Evite grades não quadradas (ex.: 2 × 3 em 512 × 341), que distorcem a face.
-- Cada célula = textura da face do tema (moldura) + pictograma composto na área útil (60%).
-- O atlas é **regerado em runtime** (canvas 2D) quando o usuário edita o dado ou troca o tema: moldura + pictograma do tema desenhados no slot. Mipmaps ligados, `anisotropy` máx. 4.
-- Padding com *edge bleed* (repetir pixels da borda) para evitar costura nos mipmaps.
+- Atlas 1024² em **grade 4 × 4 de células 256²** (arte em 240 px + 8 px de padding com *edge bleed*). 16 slots: 6 faces ativas + "?" + moldura + reservas.
+- O atlas usa **só pictogramas**, nunca a ilustração do cartão: o dado fica legível e mais discreto.
+- Regerado em runtime (canvas 2D) ao editar o dado ou trocar de tema. Mipmaps ligados, `anisotropy` ≤ 4.
 
 ### 5.5 Revisão de cada arte (portão de qualidade)
-- [ ] Duas figuras, **mesma altura**, proporção adulta (≥ 7 H; Kira 8 H).
-- [ ] Rosto **claramente adulto**, fictício, com expressão sensual ou de cumplicidade (nada de expressão de clímax).
-- [ ] **Sem nudez / anatomia sexual**: tronco em cápsula neutra, tecido opaco (Miniatura/Kira), metal/holograma liso (Velas/Orbital).
-- [ ] Contatos só em áreas neutras (mãos, ombros, cintura, costas, joelhos, pés, canelas).
-- [ ] Nenhum texto, logo, marca, símbolo religioso, personagem existente.
-- [ ] A e B distinguíveis em escala de cinza (≥ 30% de diferença de luminância).
-- [ ] Silhueta-chave da ficha reconhecível no teste de sombra (preto chapado).
-- [ ] Legível a **64 px** (cabeças separadas, membros não embolados).
-- [ ] Tudo dentro da área útil (60%); fundo transparente limpo (sem halo).
-- [ ] Setas de movimento só onde a ficha pede; cor de acento, 60%.
-- [ ] Consistência com as vizinhas no atlas (mesmo peso visual).
+**Pessoas**
+- [ ] As duas personagens são **claramente adultas** (25–45 anos): rosto maduro, proporção ≥ 7 H (Kira 8 H), mesma escala entre A e B.
+- [ ] São **fictícias**: não lembram nenhuma pessoa real, celebridade ou personagem de franquia.
+- [ ] Expressão dentro da lista permitida (sedução, cumplicidade, carinho, riso). **Sem** cara de clímax, "ahegao", dor ou medo.
+- [ ] As duas estão engajadas (olhar, sorriso, gesto): nenhuma parece passiva ou inconsciente.
 
-### 5.6 O "teste do print em público"
-Antes de aprovar, imagine a arte **num print de tela aparecendo no grupo da família ou num slide de trabalho por engano**:
-1. Alguém que não conhece o app entenderia que é "dois bonequinhos de ioga/sinalização"? → **precisa ser sim.**
-2. Há algo que precisaria ser borrado (corpo, expressão, gesto)? → **precisa ser não.**
-3. O ícone e a tela inicial revelam o propósito do app? → **precisam ser neutros** (só o dado).
-4. O nome da posição no cartão é o único indicativo — e ele é leve e não gráfico? → sim.
-Se falhar em qualquer item: simplificar a pose, afastar as figuras (aumentar o respiro), cobrir mais (tecido), ou trocar o enquadramento (vista superior tende a ser mais abstrata).
+**Cobertura**
+- [ ] **Sem** genitais, **sem** mamilos (nem marcados sob o tecido), **sem** nádegas nuas em destaque.
+- [ ] A cobertura da ficha foi aplicada **com folga** (≥ 0,5 H); nas intensidades 2–3, com duas camadas.
+- [ ] O ponto de encaixe entre os corpos está sob lençol, tecido ou corpo do parceiro, sem detalhe.
+- [ ] Tecido opaco sobre as áreas proibidas; nada transparente ou molhado.
+- [ ] **Sem fluidos** de qualquer tipo: suor escorrendo, gotas, brilho "oleoso".
+- [ ] Nenhuma representação gráfica do ato; a leitura vem só da geometria da pose.
+
+**Estilo e leitura**
+- [ ] Nível visual (§1.3.5) coerente com a intensidade da ficha.
+- [ ] Luz e paleta de pele do tema (§1.3.3–1.3.4); contraluz desenhando a silhueta.
+- [ ] Pictograma legível a **64 px** e silhueta-chave reconhecível em preto chapado.
+- [ ] Tudo dentro da área útil (60%); fundo transparente limpo no pictograma.
+- [ ] Nenhum texto, logo, marca, símbolo religioso; Orbital sem nada da Blizzard; Kira sem nada escolar.
+
+### 5.6 Teste de "capa de revista" (substitui o teste do print em público)
+Como o jogo agora é assumidamente adulto, o teste deixa de ser "parece placa de aeroporto?" e passa a ser: **"esta arte poderia estar na capa de um romance ou num editorial boudoir de revista, sem tarja?"**
+1. Algo precisaria de tarja ou desfoque para sair numa capa? → **precisa ser não.**
+2. Se o cartão aparecer por engano num print, o que se vê é um casal sensual coberto, e não um ato sexual? → **precisa ser sim.**
+3. Ícone, splash e tela do Portão 18+ mostram só o dado e elementos do tema, sem personagens? → **precisa ser sim** (regra do `PLANO.md`).
+4. O dado na mesa (pictogramas) é mais discreto que o cartão? → **precisa ser sim.**
+5. O texto do cartão é provocante e leve, sem termos gráficos? → **precisa ser sim.**
+Se falhar: subir a borda do lençol, somar uma segunda camada de cobertura, escurecer o centro, recortar o enquadramento ou trocar para vista superior.
 
 ### 5.7 Observações da direção de arte
-- As fichas mais delicadas de resolver com neutralidade são **58 (69)**, **10 (Ponte)**, **19 (Cachoeira)**, **26 (Bocejo)**, **21 (Águia)** e **61 (Gaivota)**: prefira vista superior ou 3/4 alto, respiro de 12 px entre figuras e tecido/cápsula bem lisos.
-- Poses de intensidade 3 (09, 10, 12, 19, 23, 29, 30, 32, 35, 46) pedem, no cartão do app, o selo "exige equilíbrio/força" — sugestão de UI, não de arte.
-- Várias posições compartilham base (ex.: Amazona 05/06/28/48/67; Missionário 01/15/33/34): desenhe uma "pose-mãe" e derive, mas garanta que a **silhueta-chave** de cada uma difira no teste de 64 px (ângulo do tronco, posição das pernas ou seta de movimento).
+- Fichas que exigem mais cuidado com a cobertura: **58 (69)**, **10 (Ponte)**, **19 (Cachoeira)**, **21 (Águia)**, **26 (Bocejo)**, **61 (Gaivota)**, **02 (Borboleta)**, **37 (Pernas no ombro)**. Use vista alta ou 3/4, lençol grande em diagonal e o corpo de B como segunda camada.
+- Intensidade 3 (09, 10, 12, 19, 23, 29, 30, 32, 35, 46): nível visual "Ardente" é energia e contraste, não mais anatomia. No app, vale o selo "exige equilíbrio/força" (sugestão de UI).
+- Poses-mãe compartilhadas (Amazona 05/06/28/48/67; Missionário 01/15/33/34): derive da mesma base, mas diferencie silhueta, gesto e clima para que cada carta tenha a sua própria história.
+- Revisão em dupla: quem desenha não aprova sozinho. A revisão §5.5 é assinada por uma segunda pessoa antes de a arte entrar no atlas ou no cartão.
