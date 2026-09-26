@@ -93,3 +93,9 @@ dado/
   js/data/positions.pt-BR.json
   js/storage.js
 ```
+
+## Arte (direção de arte — Iara)
+- Insumo: `arte/posicoes_insumo.md` (69 posições de referência).
+- Plano de arte: `arte/PLANO_ARTE.md` — bíblia de estilo dos pictogramas, adaptação e prompts por tema, artes de apoio (face "?", fundos, ícone, tela 18+), 69 fichas de pose e checklist de produção.
+- Fluxo: pictograma-base vetorial (SVG) → variações por tema (PNG 1024 com alfa + WebP) → atlas do dado → revisão ("teste do print em público").
+- Poses mais delicadas (10, 19, 21, 26, 58, 61): usar vista de cima ou 3/4 alto.
