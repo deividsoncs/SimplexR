@@ -57,6 +57,50 @@ Consolidado a partir de duas revisões de especialistas: **Marina (UI)** e **Raf
 Tokens: `colors`, `fonts`, `shape`, `dice`, `lighting`, `post`, `scene`, `pictogram`, `particles`, `motion`, `audio`, `reveal`.
 Trocar tema = `dispose()` dos recursos antigos + regenerar texturas + aplicar CSS vars.
 
+## Casca visual do jogo (UI shell) — inspirada em jogo de cartas de fantasia sombria (estilo Gwent)
+A moldura da tela, as fontes, os botões e os painéis seguem uma estética de **jogo de cartas medieval-fantasia**, igual em todo o app. Os 4 temas continuam mudando o **dado, a cena 3D, as artes e as cores de destaque** dentro dessa moldura.
+
+**Propriedade intelectual:** é só *inspirado*. Nada de logo, nome, fonte proprietária, molduras copiadas ou sons do The Witcher/Gwent; tudo é desenhado do zero.
+
+### Materiais e moldura
+- Madeira escura entalhada, ferro/bronze envelhecido, couro gasto e pergaminho, com filigrana dourada e ornamentos rúnicos originais.
+- Moldura da tela inteira em **9-slice** (`border-image` com SVG próprio): cantoneiras de metal com rebites nos 4 cantos, bordas chanfradas, vinheta escura interna. Respeita as safe areas do iPhone (a moldura contorna o notch e a barra de home).
+- Barra superior como uma **placa entalhada**; barra inferior como uma **bandeja de madeira** onde fica o botão Rolar.
+- Texturas procedurais em SVG (`feTurbulence` + iluminação) ou canvas: veio de madeira, granulado de couro, manchas de pergaminho.
+
+### Tipografia (Google Fonts, licença livre)
+- Títulos: **Cinzel** / **Cinzel Decorative** (capitulares romanas, clima épico).
+- Texto: **Alegreya** ou **EB Garamond** (serifada clássica, boa leitura).
+- Números/rótulos pequenos: **Alegreya SC** (versalete).
+- Texto dourado com relevo sutil (`text-shadow` duplo: brilho claro em cima, sombra escura embaixo).
+
+### Botões e controles
+- **Primário (Rolar, Entrar):** placa de metal em forma de escudo alongado, borda de bronze, texto gravado; ao tocar, afunda 2 px e acende um brilho dourado.
+- **Secundários (tema, editor, ajustes):** **medalhões redondos** tipo moeda, com ícone em relevo.
+- **Toggles:** alavanca/fecho de metal; **sliders:** trilho de couro com cursor de bronze.
+- Bottom sheets (editor, ajustes) como **pergaminho** desenrolando de baixo, com bordas rasgadas e selo de cera para fechar.
+
+### Resultado como carta
+- O resultado aparece como uma **carta** que vira na tela: arte da posição no retrato, **faixa com o nome** embaixo, texto curto no rodapé.
+- **Borda por intensidade:** bronze (1), prata (2), ouro (3), com uma gema no canto indicando a intensidade.
+- A face "?" usa o **verso da carta**; a "escolha do parceiro" vira uma mão de 3 cartas em leque.
+- **Editor do dado = montar o baralho:** o catálogo é uma coleção de cartas e o dado tem 6 espaços; tocar numa carta a coloca na face selecionada.
+
+### Som e movimento
+- Sons: carta deslizando, clique metálico nos botões, pergaminho abrindo, moeda no medalhão.
+- Virada de carta 3D em CSS (`rotateY`) de ~0,5 s; com "reduzir movimento", vira fade.
+
+### Relação com os 4 temas
+A moldura é fixa; cada tema só troca:
+| Tema | Metal da filigrana | Gema/destaque | Fundo atrás da moldura |
+|---|---|---|---|
+| Comando Orbital | ferro azulado | ciano | convés escuro |
+| Luz de Velas | ouro velho | vinho | veludo |
+| Miniatura | ouro vivo | turquesa | carmim |
+| Kira | prata rosada | rosa | lilás noturno |
+
+Novos tokens: `shell{frameSvg, frameMetal, woodTone, parchmentTone, gemColor, buttonShape, fontDisplay, fontBody, fontSmallCaps, sounds}`.
+
 ## Privacidade e discrição
 - Nada sai do aparelho (sem analytics); tudo em `localStorage`; "Apagar tudo".
 - Nome/ícone neutros; **botão de pânico** (toque duplo com 2 dedos ou botão discreto → tela neutra); PIN opcional.
