@@ -6,7 +6,7 @@ Consolidado a partir de duas revisões de especialistas: **Marina (UI)** e **Raf
 ## Regras de conteúdo
 - Sem conteúdo sexual explícito: posições = **pictogramas geométricos abstratos** (personagens adultas fictícias, com rosto, sem nudez) + nome + descrição curta não gráfica.
 - Temas são *inspirados em* estilos: nada de nomes, logos, fontes, sons ou personagens de terceiros (ex.: Blizzard/StarCraft).
-- Rostos permitidos: personagens fictícias, claramente adultas, com expressões de carinho/cumplicidade; nunca pessoas reais nem expressões sexuais.
+- Rostos: personagens fictícias, claramente adultas, com **expressões sensuais** (olhar sedutor, sorriso malicioso); nunca pessoas reais.
 - Anime: só proporções adultas (proibido chibi, rosto infantil, uniforme escolar).
 - Oriental: só geometria, têxteis e ornamentos — sem símbolos religiosos.
 - Portão 18+ no primeiro acesso.
@@ -19,7 +19,14 @@ Consolidado a partir de duas revisões de especialistas: **Marina (UI)** e **Raf
 - Hospedagem: GitHub Pages (pasta `dado/`).
 
 ## Telas (4)
-1. **Portão** — "Tenho 18+ / Sair" (+ PIN opcional).
+1. **Portão 18+** — em toda primeira abertura (e a cada 30 dias), antes de qualquer arte do jogo:
+   - Texto principal em pt-BR, legenda em inglês logo abaixo, em fonte menor:
+     > **Este jogo contém conteúdo adulto e é destinado exclusivamente a maiores de 18 anos.** Se você é menor de idade ou não deseja ver esse tipo de conteúdo, saia agora.
+     > *This game contains adult content and is intended only for people aged 18 or older. If you are under 18 or do not wish to see this kind of content, leave now.*
+   - Botões: **"Tenho 18 anos ou mais — Entrar"** / *"I am 18 or older — Enter"* e **"Sair"** / *"Leave"*.
+   - "Sair" redireciona para fora do jogo com `location.replace("https://www.google.com")`, para o botão Voltar não retornar ao jogo. A escolha "Entrar" fica salva no `localStorage`.
+   - Nenhuma arte com personagens aparece antes da confirmação; o ícone e o splash também não mostram personagens.
+   - PIN opcional depois do portão.
 2. **Jogo** — dado ~65% da tela, botão Rolar na zona do polegar; estados: ocioso → rolando → resultado (bottom sheet) → "?" → pânico.
 3. **Editor do dado** (bottom sheet) — 6 faces em grade 2×3, catálogo filtrável, presets.
 4. **Ajustes** (bottom sheet) — tema, reduzir movimento, sons, chacoalhar, PIN, apagar tudo.
